@@ -2,11 +2,11 @@ const portfolioPayload = {
   profile: {
     name: "Kishan Maharana",
     role: "Software Engineer",
-    experience: "5+ years",
+    experience: "6+ years",
     summary:
       "Backend-focused engineer with strong Laravel, API, Kafka, WebSocket, and database experience. I enjoy turning workflow-heavy products into scalable, reliable systems with clean interfaces and clear developer ergonomics.",
     coreStack: "Laravel, PHP, Kafka, MySQL",
-    location: "Bengaluru, India",
+    location: "Vadodara, India",
     availability: "Open to remote and hybrid roles",
     strengths: [
       "API Design",
@@ -17,67 +17,93 @@ const portfolioPayload = {
     ]
   },
   stats: [
-    { label: "Projects Shipped", value: "12+" },
-    { label: "Years Experience", value: "5+" },
+    { label: "Projects Shipped", value: "8+" },
+    { label: "Years Experience", value: "6+" },
     { label: "Core Domains", value: "API / SaaS / Ops" }
   ],
   experience: [
     {
-      title: "Senior Software Engineer",
-      company: "Product Engineering",
-      period: "2023 - Present",
+      title: "Rishabh Software Pvt Ltd",
+      company: "Software Engineer",
+      period: "2025 - Present",
+      isCurrent: true,
       summary: "Leading backend architecture and delivery for platform-scale products.",
       highlights: [
-        "Built modular Laravel services for high-complexity business workflows.",
-        "Improved endpoint consistency with versioned API design and reusable service layers.",
-        "Worked cross-functionally with frontend, QA, and stakeholders to keep releases stable."
+        "Developed and enhanced RESTful APIs; resolved critical server-side issues and performance bottlenecks.",
+        "Worked on extending and modifying existing Kafka-based services as per evolving business requirements.",
+        "Involved in backend development using Laravel and PostgreSQL.",
+        "Followed clean code architecture principles to ensure scalable and maintainable codebase.",
+        "Contributed to an AdTech project with a focus on data-driven performance and efficiency.",
+        "Collaborated within a cross-functional Agile team to deliver robust and timely solutions."
       ]
     },
     {
-      title: "Software Engineer",
-      company: "Platform Development",
-      period: "2021 - 2023",
+      title: "Codebuddy Pvt Ltd",
+      company: "Software Developer",
+      period: "2024 - 2025",
+      isCurrent: false,
       summary: "Delivered internal tools and integration-heavy systems across multiple products.",
       highlights: [
-        "Implemented Kafka-backed processing and real-time update flows.",
-        "Created reusable admin modules for analytics, reporting, and workflow management.",
-        "Focused on maintainability, observability, and delivery speed."
+        "Developed and integrated both APIs and UI components for seamless user experiences.",
+        "Directly collaborated with clients to understand requirements and deliver tailored solutions.",
+        "Integrated authentication and data-sharing features with platforms like Google,Facebook, GitHub, YouTube, and Google Drive.",
+        "Implemented Stripe payment gateway for secure and efficient transactions.",
+        "Worked with APIs like Rev API and Embedrocks for enhanced functionality.",
+        "AI tools such as ChatGPT and Gemini, tailoring solutions to project requirements.",
+        "Implemented Laravel event listeners and job queues to enhance system performance.",
+        "Optimized database queries and integrated WebSockets for real-time data updates.",
+        "Proficient in troubleshooting and optimizing server-side processes.",
+        "Hands-on experience in working with Docker across multiple projects.",
+        "Basic experience with Vue.js and Node.js for expanding project capabilities."
       ]
     },
     {
-      title: "Laravel Developer",
-      company: "Web Solutions",
-      period: "2019 - 2021",
+      title: "Valuecoders",
+      company: "Software Developer",
+      period: "2020 - 2023",
+      isCurrent: false,
       summary: "Built API-first systems and data-rich web applications.",
       highlights: [
-        "Developed REST APIs for client products and internal tools.",
-        "Worked with MySQL and PostgreSQL-backed systems and secure access patterns.",
-        "Delivered AJAX-driven experiences for responsive product flows."
+        "Developing new API's along with redesigning existing API's.",
+        "Amazon AWS S3 integration for required services to decrease server load.",
+        "worked on query optimization and socket integration to show real-time data.",
+        "Experience with API development, versioning, error handling, and server level debugging.",
+        "Used JavaScript, HTML, CSS, Bootstrap, jQuery, AJAX and Vue JS for frontend development along with Laravel.",
+        "Handling Roles & Permissions for different users.",
+        "API development, versioning, error handling, and server level debugging.",
+        "Integrated Stripe payment gateway to manage smooth payment processing for users.",
+        "Working on service-repository patterns for smooth business logic implementation.",
+        "Working on Vue.js for Frontend Integration.",
+        "Managing a team of junior employees.",
       ]
     }
   ],
   projects: [
     {
-      title: "Workforce Management",
-      subtitle: "Operations platform for analytics and automation",
+      title: "Workstatus",
+      subtitle: "Time Tracking & Employee Monitoring Tool",
       features: ["Real-time analytics", "Automated reporting", "Performance optimization"],
-      tags: ["Laravel", "Dashboards", "Ops"]
+      content: "Developed scalable APIs for real-time analytics and automated reporting, ensuring efficient workforce management. Focused on optimizing system performance and reliability to meet business needs.",
+      tags: ["Laravel", "Docker", "Vue JS"]
     },
     {
-      title: "Content Management",
-      subtitle: "Enterprise CMS with extensible APIs",
+      title: "Membership.io",
+      subtitle: "Automated Content Management Platform",
+      content:"Designed and optimized backend APIs, improved existing services, and integrated third-party tools. Worked closely with client-side developers to implement scalable features for seamless content management.",
       features: ["API optimization", "Third-party integrations", "Scalable architecture"],
-      tags: ["CMS", "REST", "PHP"]
+      tags: ["CMS", "REST", "Laravel", "Vue JS", 'Third-party APIs']
     },
     {
-      title: "Resume Platform",
-      subtitle: "Career product with generation workflows",
+      title: "HiringDay",
+      subtitle: "Resume & Cover Letter Assistance Platform",
+      content:"Developed a full-stack solution in Laravel, allowing users to either upload their resume/CV or provide personal and professional details to generate expert-crafted resumes and cover letters. Designed and implemented both frontend and backend functionalities for seamless user experience.",
       features: ["Full-stack Laravel app", "Resume generation", "Template system"],
-      tags: ["Laravel", "PDF", "UX"]
+      tags: ["Laravel", "PDF", "PHP"]
     },
     {
       title: "XactiMatch",
       subtitle: "Insurance claim processing system",
+      content:"Developed a Laravel-based system to compare insurance claim documents, identifying missing details, similarities, and discrepancies. Implemented data scraping, mapping, and automated report generation. Designed and built both frontend and backend solutions, along with a fully customized admin panel for seamless management.",
       features: ["Document comparison", "Data scraping", "Automated reports"],
       tags: ["Claims", "Automation", "Reporting"]
     }
@@ -132,27 +158,22 @@ const portfolioPayload = {
   ],
   blog: [
     {
-      title: "Turning business workflows into clean API contracts",
-      summary: "How structured endpoints reduce frontend friction and make scaling easier.",
-      href: "#"
+      title: "How to do object detection using Hugging Face API - Laravel",
+      summary: "Learn How to Do Object Detection Using Hugging Face API in Laravel.",
+      href: "https://www.thedevnerd.com/2025/02/blog-post.html"
     },
     {
-      title: "What makes a backend feel reliable to product teams",
-      summary: "A practical view on performance, consistency, and operational trust.",
-      href: "#"
+      title: "Discover Why Stripe Stands Out as Your Top Payment Gateway",
+      summary: "Step-by-step guide to Why Stripe is one of the best Payment Gateway.",
+      href: "https://www.thedevnerd.com/2023/04/is-stripe-the-best-payment-gateway.html"
     },
     {
-      title: "When to optimize queries and when to redesign data flow",
-      summary: "A simple mental model for deciding between tuning and re-architecture.",
-      href: "#"
+      title: "Simple Steps: Turn Database Data into JSON in Laravel - PHP",
+      summary: "Step by Step guide to Convert Database entries to JSON file in Laravel.",
+      href: "https://www.thedevnerd.com/2022/07/how-to-convert-data-to-json-file-from.html"
     }
   ],
   contact: [
-    {
-      title: "Live Portfolio",
-      value: "kumarkishan070997.github.io/kishan-dev",
-      href: "https://kumarkishan070997.github.io/kishan-dev/"
-    },
     {
       title: "GitHub",
       value: "github.com/kumarkishan070997",
@@ -161,7 +182,7 @@ const portfolioPayload = {
     {
       title: "LinkedIn",
       value: "Add your profile URL here",
-      href: "#"
+      href: "https://www.linkedin.com/in/kishanmaharana/"
     }
   ]
 };
@@ -263,7 +284,7 @@ function renderExperience() {
               <h4 class="timeline-title">${item.title}</h4>
               <p class="timeline-company">${item.company}</p>
             </div>
-            <span class="card-tag">${item.period}</span>
+            ${item.isCurrent ? `<span class="card-tag"><span class="blink_me"></span>   ${item.period}</span>` : `<span class="card-tag">${item.period}</span>`}
           </div>
           <p class="timeline-summary">${item.summary}</p>
           <ul class="timeline-points">
@@ -289,7 +310,7 @@ function renderProjects() {
             <span class="method-pill method-get">GET</span>
           </div>
           <ul class="project-features">
-            ${project.features.map((feature) => `<li>${feature}</li>`).join("")}
+            <li>${project.content}</li>
           </ul>
           <div class="project-tags">
             ${project.tags.map((tag) => `<span class="project-tag">${tag}</span>`).join("")}
