@@ -6,6 +6,8 @@ const portfolioPayload = {
     summary:
       "Backend-focused engineer with strong Laravel, API, Kafka, WebSocket, and database experience. I enjoy turning workflow-heavy products into scalable, reliable systems with clean interfaces and clear developer ergonomics.",
     coreStack: "Laravel, PHP, Kafka, MySQL",
+    location: "Bengaluru, India",
+    availability: "Open to remote and hybrid roles",
     strengths: [
       "API Design",
       "Scalable Architecture",
@@ -118,6 +120,16 @@ const portfolioPayload = {
       ]
     }
   ],
+  skillBadges: [
+    { label: "APIs", icon: "fa-solid fa-network-wired" },
+    { label: "Database", icon: "fa-solid fa-database" },
+    { label: "Laravel", icon: "fa-solid fa-code" },
+    { label: "Cloud", icon: "fa-solid fa-cloud" },
+    { label: "Docker", icon: "fa-solid fa-cube" },
+    { label: "Kafka", icon: "fa-solid fa-stream" },
+    { label: "Performance", icon: "fa-solid fa-tachometer-alt" },
+    { label: "Leadership", icon: "fa-solid fa-users" }
+  ],
   blog: [
     {
       title: "Turning business workflows into clean API contracts",
@@ -215,6 +227,8 @@ function renderHero() {
   document.getElementById("heroSummary").textContent = profile.summary;
   document.getElementById("expYears").textContent = profile.experience;
   document.getElementById("heroStack").textContent = profile.coreStack;
+  document.getElementById("heroLocation").textContent = profile.location;
+  document.getElementById("heroAvailability").textContent = profile.availability;
 }
 
 function renderStrengths() {
@@ -314,6 +328,23 @@ function renderSkills() {
     .join("");
 }
 
+function renderSkillBadges() {
+  const container = document.getElementById("skillBadgeGrid");
+  container.innerHTML = portfolioPayload.skillBadges
+    .map(
+      (badge) => `
+        <div class="skill-badge reveal">
+          <div class="badge-icon"><i class="${badge.icon}"></i></div>
+          <div class="badge-text">
+            <span>${badge.label}</span>
+            <small>Core capability</small>
+          </div>
+        </div>
+      `
+    )
+    .join("");
+}
+
 function renderCompactList(targetId, items, linkText) {
   const container = document.getElementById(targetId);
   const itemClass = targetId === "contactGrid" ? "contact-item" : "blog-item";
@@ -360,6 +391,7 @@ function renderPreview() {
   renderExperience();
   renderProjects();
   renderSkills();
+  renderSkillBadges();
   renderCompactList("blogGrid", portfolioPayload.blog, "Open article");
   renderCompactList("contactGrid", portfolioPayload.contact, "Open");
   revealItems();

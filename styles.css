@@ -404,40 +404,111 @@ a {
 
 .hero-left {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
+  align-items: flex-start;
 }
 
 .avatar-stack {
-  width: 110px;
-  flex: 0 0 110px;
-}
-
-.avatar-token {
-  border-radius: 28px;
   display: grid;
-  place-items: center;
-  background: linear-gradient(135deg, var(--orange), #ff9c77);
-  color: white;
-  font-size: 2rem;
-  font-weight: 800;
-  box-shadow: 0 20px 40px rgba(255, 108, 55, 0.28);
+  gap: 1rem;
+  align-items: start;
 }
 
-.endpoint-badge {
-  margin-top: 0.75rem;
-  text-align: center;
-  padding: 0.45rem 0.75rem;
+.avatar-card {
+  width: 170px;
+  min-width: 170px;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 108, 55, 0.18);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
+
+.avatar-card img {
+  width: 100%;
+  display: block;
+  /* aspect-ratio: 1 / 1; */
+  object-fit: cover;
+}
+
+.profile-meta {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.profile-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 0.85rem;
   border-radius: 999px;
-  background: rgba(67, 215, 135, 0.12);
-  color: var(--green);
+  background: rgba(255, 108, 55, 0.1);
+  color: var(--orange);
   font-weight: 700;
   font-size: 0.85rem;
 }
 
-.hero-name {
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  margin-bottom: 0.35rem;
+.hero-copy {
+  display: grid;
+  gap: 0.95rem;
 }
+
+.profile-details {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.detail-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  font-size: 0.92rem;
+}
+
+.detail-pill i {
+  color: var(--orange);
+}
+
+.skill-badge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.skill-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1rem;
+  border-radius: 18px;
+  background: rgba(12, 16, 24, 0.72);
+  border: 1px solid var(--border);
+}
+
+.badge-icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: rgba(255, 108, 55, 0.12);
+  color: var(--orange);
+  font-size: 1.1rem;
+}
+
+.badge-text {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.badge-text span {
+  font-weight: 700;
+}
+
 
 .hero-role {
   color: var(--orange);
@@ -707,7 +778,8 @@ a {
   .hero-response-card,
   .response-grid,
   .card-grid,
-  .skills-grid {
+  .skills-grid,
+  .skill-badge-grid {
     grid-template-columns: 1fr;
   }
 

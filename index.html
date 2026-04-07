@@ -145,12 +145,19 @@
               <section class="hero-response-card">
                 <div class="hero-left">
                   <div class="avatar-stack">
-                    <div class="avatar-token">
-                      <img id="heroAvatar" class="img-fluid" style="border-radius: 20px;" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgR_dDq8-GK32lNlL5-fgXrY9aNf0Cyc9JaYPW0tW4byvciTPqQiUTqy4byB1Gt7yrzVERYbNF8mBcbefD3WUKGAyoct5D1bP2L4D5Ylqj0FiZW2hauMAUU8o8d3zQR9b-RCUNem-yCNkSNX9mTD4B9rzVDhikNxr4YMqOeJViopUQvVYVsmGPJnnN9-15D/s879/IMG-20260121-WA00322.jpg" alt="Profile picture of Kishan Maharana">
+                    <div class="avatar-card">
+                      <img id="heroAvatar" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgR_dDq8-GK32lNlL5-fgXrY9aNf0Cyc9JaYPW0tW4byvciTPqQiUTqy4byB1Gt7yrzVERYbNF8mBcbefD3WUKGAyoct5D1bP2L4D5Ylqj0FiZW2hauMAUU8o8d3zQR9b-RCUNem-yCNkSNX9mTD4B9rzVDhikNxr4YMqOeJViopUQvVYVsmGPJnnN9-15D/s879/IMG-20260121-WA00322.jpg" alt="Profile picture of Kishan Maharana">
                     </div>
-                    <div class="endpoint-badge">200 OK</div>
+                    <div class="profile-meta" style="display: none;">
+                      <span class="profile-badge">Open to remote + hybrid roles</span>
+                      <div class="profile-details">
+                        <div class="detail-pill"><i class="fa-solid fa-location-dot"></i> <span id="heroLocation"></span></div>
+                        <div class="detail-pill"><i class="fa-solid fa-briefcase"></i> <span id="heroAvailability"></span></div>
+                      </div>
+                    </div>
                   </div>
-                  <div>
+
+                  <div class="hero-copy">
                     <p class="section-kicker">Profile Overview</p>
                     <h2 id="heroName" class="hero-name"></h2>
                     <p id="heroRole" class="hero-role"></p>
@@ -218,6 +225,14 @@
                   <span class="card-tag">skills[]</span>
                 </div>
                 <div id="skillsGrid" class="skills-grid"></div>
+              </section>
+
+              <section class="studio-card section-card">
+                <div class="card-head">
+                  <h3>Skill Badges</h3>
+                  <span class="card-tag">badge[]</span>
+                </div>
+                <div id="skillBadgeGrid" class="skill-badge-grid"></div>
               </section>
 
               <section class="response-grid">
