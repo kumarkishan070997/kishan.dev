@@ -471,3 +471,31 @@ function initPortfolioApp() {
 }
 
 document.addEventListener("DOMContentLoaded", initPortfolioApp);
+
+AOS.init({
+  duration: 700,
+  once: true
+});
+
+gsap.from(".hero-response-card", {
+  y: 40,
+  opacity: 0,
+  duration: 0.6
+});
+
+function animateValue(id, start, end, duration) {
+  let range = end - start;
+  let stepTime = Math.abs(Math.floor(duration / range));
+  let current = start;
+  let obj = document.getElementById(id);
+
+  let timer = setInterval(() => {
+    current += 1;
+    obj.textContent = current + "+";
+    if (current == end) clearInterval(timer);
+  }, stepTime);
+}
+
+// Use
+animateValue("expYears", 0, 5, 800);
+

@@ -29,6 +29,9 @@
   >
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
   <link rel="stylesheet" href="styles.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
   <div class="app-shell">
@@ -136,9 +139,8 @@
               <strong>Rendered Response</strong>
             </div>
 
-            <div id="loadingState" class="loading-state">
-              <div class="loader-ring"></div>
-              <p>Waiting for request...</p>
+            <div id="loadingState" class="loading-state skeleton">
+              <p class="empty-state">Click "Send" to fetch API response 🚀</p>
             </div>
 
             <div id="responsePreview" class="response-preview hidden">
@@ -178,7 +180,7 @@
               </section>
 
               <section class="response-grid">
-                <article class="studio-card">
+                <article class="studio-card" data-aos="fade-up">
                   <div class="card-head">
                     <h3>Strengths</h3>
                     <span class="card-tag">traits[]</span>
@@ -186,7 +188,7 @@
                   <div id="strengthList" class="pill-grid"></div>
                 </article>
 
-                <article class="studio-card">
+                <article class="studio-card" data-aos="fade-up">
                   <div class="card-head">
                     <h3>Profile Stats</h3>
                     <span class="card-tag">stats</span>
@@ -195,7 +197,7 @@
                 </article>
               </section>
 
-              <section class="studio-card section-card">
+              <section class="studio-card section-card" data-aos="fade-up">
                 <div class="card-head">
                   <h3>Experience Timeline</h3>
                   <span class="card-tag">experience[]</span>
@@ -203,7 +205,7 @@
                 <div id="experienceGrid" class="timeline-list"></div>
               </section>
 
-              <section class="studio-card section-card">
+              <section class="studio-card section-card" data-aos="fade-up">
                 <div class="card-head">
                   <h3>Education</h3>
                   <span class="card-tag">education[]</span>
@@ -211,7 +213,7 @@
                 <div id="educationGrid" class="timeline-list"></div>
               </section>
 
-              <section class="studio-card section-card">
+              <section class="studio-card section-card" data-aos="fade-up">
                 <div class="card-head">
                   <h3>Projects Collection</h3>
                   <span class="card-tag">projects[]</span>
@@ -219,14 +221,14 @@
                 <div id="projectGrid" class="card-grid"></div>
               </section>
               
-              <section class="studio-card section-card">
+              <section class="studio-card section-card" data-aos="fade-up">
                 <div class="card-head">
                   <h3>Skill Badges</h3>
                   <span class="card-tag">badge[]</span>
                 </div>
                 <div id="skillBadgeGrid" class="skill-badge-grid"></div>
               </section>
-              <section class="studio-card section-card">
+              <section class="studio-card section-card" data-aos="fade-up">
                 <div class="card-head">
                   <h3>Skills Matrix</h3>
                   <span class="card-tag">skills[]</span>
@@ -236,7 +238,7 @@
 
 
               <section class="response-grid">
-                <article class="studio-card section-card">
+                <article class="studio-card section-card" data-aos="fade-up">
                   <div class="card-head">
                     <h3>Articles</h3>
                     <span class="card-tag">blog[]</span>
@@ -244,7 +246,7 @@
                   <div id="blogGrid" class="compact-list"></div>
                 </article>
 
-                <article class="studio-card section-card">
+                <article class="studio-card section-card" data-aos="fade-up">
                   <div class="card-head">
                     <h3>Contact Endpoints</h3>
                     <span class="card-tag">contact</span>
@@ -253,7 +255,7 @@
                 </article>
               </section>
 
-              <section class="studio-card section-card">
+              <section class="studio-card section-card" data-aos="fade-up">
                 <div class="card-head">
                   <h3>Testimonials</h3>
                   <span class="card-tag">testimonials[]</span>
