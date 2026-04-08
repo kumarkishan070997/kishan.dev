@@ -184,7 +184,57 @@ const portfolioPayload = {
       value: "Add your profile URL here",
       href: "https://www.linkedin.com/in/kishanmaharana/"
     }
-  ]
+  ],
+  // Add this inside the portfolioPayload object in script.js
+// Add/Update this inside the portfolioPayload object in script.js
+certifications: [
+  {
+    title: "Kafka for beginners",
+    provider: "Udemy",
+    date: "2025",
+    image: "./docs/kafka.jpg", 
+    summary: "Comprehensive introduction to Kafka, covering core concepts, architecture, and hands-on exercises."
+  },
+  {
+    title: "Docker",
+    provider: "Udemy",
+    date: "2026",
+    image: "./docs/Docker.jpg",
+    summary: "In-depth Docker course covering containerization, orchestration, and real-world applications for developers and DevOps professionals."
+  },
+  {
+    title: "Gen AI",
+    provider: "Udemy",
+    date: "2026",
+    image: "./docs/GENAI.jpg", 
+    summary: "Comprehensive course on Generative AI, covering foundational concepts, model architectures, and practical applications across industries."
+  },
+  {
+    title: "Kubernetes",
+    provider: "Udemy",
+    date: "2026",
+    image: "./docs/kubernetes.jpg",
+    summary: "Comprehensive course on Kubernetes, covering container orchestration, deployment strategies, and real-world applications for developers and DevOps professionals."
+  },
+  {
+    title: "Node JS",
+    provider: "Udemy",
+    date: "2026",
+    image: "./docs/nodejs.jpg",
+    summary: "Comprehensive course on Node.js, covering asynchronous programming, middleware, and real-world applications for developers and DevOps professionals."
+  }
+],
+// Update this inside the portfolioPayload object in script.js
+education: [
+  {
+    degree: "Master of Computer Applications (MCA)",
+    institution: "Institute of Management and Information Technology ( IMIT )",
+    location: "Odisha, India",
+    period: "2018 - 2020",
+    score: "9.03 CGPA",
+    details: "Specialized in Software Engineering and Database Management Systems."
+  }
+],
 };
 
 const routeMap = {
@@ -211,6 +261,20 @@ function setCollectionState(activeRoute) {
   });
 }
 
+// Update the buildPayload function to handle the new route
+function buildPayload(url) {
+  if (url.includes("/projects")) return { endpoint: "projects", data: portfolioPayload.projects };
+  if (url.includes("/skills")) return { endpoint: "skills", data: portfolioPayload.skills };
+  if (url.includes("/contact")) return { endpoint: "contact", data: portfolioPayload.contact };
+  // Add this line:
+  if (url.includes("/certifications")) return { endpoint: "certifications", data: portfolioPayload.certifications };
+
+  return {
+    endpoint: "portfolio",
+    meta: { status: 200, version: "v1", generatedAt: new Date().toISOString() },
+    data: portfolioPayload
+  };
+}
 function buildPayload(url) {
   if (url.includes("/projects")) {
     return { endpoint: "projects", data: portfolioPayload.projects };
@@ -405,6 +469,91 @@ function revealItems() {
   });
 }
 
+function renderCertifications() {
+  const container = document.getElementById("certificationsGrid");
+  // Ensure the container uses the grid layout
+  container.className = "card-grid"; 
+  
+  container.innerHTML = portfolioPayload.certifications
+    .map((cert, index) => `
+        <article class="cert-card reveal" onclick="openCertModal(${index})">
+          <div class="cert-image-preview">
+            <img src="${cert.image}" alt="${cert.title}">
+            <div class="cert-overlay">
+              <i class="fa-solid fa-expand"></i>
+              <span>View Full Certificate</span>
+            </div>
+          </div>
+          <div class="cert-content">
+            <div class="compact-top">
+              <h4 class="cert-title">${cert.title}</h4>
+              <span class="card-tag">${cert.date}</span>
+            </div>
+            <p class="cert-provider">${cert.provider}</p>
+          </div>
+        </article>
+      `).join("");
+}
+
+function renderEducation() {
+  const container = document.getElementById("educationGrid");
+  // Only take the first (latest) item
+  const latestEdu = portfolioPayload.education[0];
+
+  container.innerHTML = `
+    <div class="education-featured-card reveal">
+      <div class="edu-icon-wrap">
+        <i class="fa-solid fa-graduation-cap"></i>
+      </div>
+      <div class="edu-body">
+        <div class="edu-header">
+          <div>
+            <h4 class="edu-degree">${latestEdu.degree}</h4>
+            <p class="edu-institution">${latestEdu.institution} • ${latestEdu.location}</p>
+          </div>
+          <div class="edu-meta">
+            <span class="card-tag">${latestEdu.period}</span>
+            <span class="method-pill method-get">${latestEdu.score}</span>
+          </div>
+        </div>
+        <p class="edu-details">${latestEdu.details}</p>
+      </div>
+    </div>
+  `;
+}
+
+// Ensure you call this in your renderPreview() function
+// renderEducation();
+
+// Global function to handle the "pop" effect
+window.openCertModal = function(index) {
+  const cert = portfolioPayload.certifications[index];
+  const modalHtml = `
+    <div class="modal fade" id="certModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark border-secondary">
+          <div class="modal-header border-0">
+            <h5 class="modal-title text-white">${cert.title}</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img src="${cert.image}" class="img-fluid rounded" alt="${cert.title}">
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+  
+  // Remove old modal if exists
+  const oldModal = document.getElementById('certModal');
+  if (oldModal) oldModal.remove();
+  
+  document.body.insertAdjacentHTML('beforeend', modalHtml);
+  const myModal = new bootstrap.Modal(document.getElementById('certModal'));
+  myModal.show();
+};
+
+// Update your renderPreview function to include the call
 function renderPreview() {
   renderHero();
   renderStrengths();
@@ -415,8 +564,43 @@ function renderPreview() {
   renderSkillBadges();
   renderCompactList("blogGrid", portfolioPayload.blog, "Open article");
   renderCompactList("contactGrid", portfolioPayload.contact, "Open");
+  renderCertifications(); // Add this line
+  renderEducation();
   revealItems();
   animateSkillBars();
+}
+
+
+function initPortfolioApp() {
+  // Initialize AOS on page load
+  AOS.init({
+    duration: 600,
+    easing: "ease-in-out",
+    once: false,
+    offset: 100
+  });
+
+  initCollectionButtons();
+  initSendActions();
+}
+
+document.addEventListener("DOMContentLoaded", initPortfolioApp);
+
+function animateValue(elementId, start, end, duration) {
+  const element = document.getElementById(elementId);
+  if (!element) return;
+
+  let startTimestamp = null;
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    const value = Math.floor(progress * (end - start) + start);
+    element.textContent = value + (elementId === "expYears" ? "+" : "");
+    if (progress < 1) {
+      requestAnimationFrame(step);
+    }
+  };
+  requestAnimationFrame(step);
 }
 
 function mockRequest() {
@@ -443,6 +627,19 @@ function mockRequest() {
     ui.loadingState.classList.add("hidden");
     ui.responsePreview.classList.remove("hidden");
     renderPreview();
+
+    // Initialize animations AFTER rendering
+    setTimeout(() => {
+      AOS.refresh(); // Refresh AOS for newly rendered elements
+      
+      gsap.from(".hero-response-card", {
+        y: 40,
+        opacity: 0,
+        duration: 0.6
+      });
+      
+      animateValue("expYears", 0, 6, 800);
+    }, 50);
   }, latency);
 }
 
@@ -465,37 +662,5 @@ function initSendActions() {
   });
 }
 
-function initPortfolioApp() {
-  initCollectionButtons();
-  initSendActions();
-}
 
-document.addEventListener("DOMContentLoaded", initPortfolioApp);
-
-AOS.init({
-  duration: 700,
-  once: true
-});
-
-gsap.from(".hero-response-card", {
-  y: 40,
-  opacity: 0,
-  duration: 0.6
-});
-
-function animateValue(id, start, end, duration) {
-  let range = end - start;
-  let stepTime = Math.abs(Math.floor(duration / range));
-  let current = start;
-  let obj = document.getElementById(id);
-
-  let timer = setInterval(() => {
-    current += 1;
-    obj.textContent = current + "+";
-    if (current == end) clearInterval(timer);
-  }, stepTime);
-}
-
-// Use
-animateValue("expYears", 0, 5, 800);
 

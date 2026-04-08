@@ -678,7 +678,7 @@ a {
 }
 
 .card-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .project-tags {
@@ -697,7 +697,7 @@ a {
 }
 
 .skills-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .skill-panel h4 {
@@ -870,4 +870,208 @@ a {
 
 body {
   transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Add to styles.css */
+.modal-content {
+  background-color: var(--bg-panel) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-lg);
+}
+
+.blog-item:hover .compact-link {
+  text-decoration: underline;
+}
+
+.blog-item {
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.blog-item:hover {
+  background: rgba(255, 108, 55, 0.05);
+  transform: scale(1.02);
+}
+
+
+
+/* Certification Grid & Cards */
+.cert-card {
+  background: rgba(12, 16, 24, 0.72);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 108, 55, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Image Preview Container */
+.cert-image-preview {
+  position: relative;
+  height: 160px;
+  overflow: hidden;
+  background: #000;
+}
+
+.cert-image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  opacity: 0.8;
+}
+
+.cert-card:hover .cert-image-preview img {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Hover Overlay */
+.cert-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 17, 23, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: #fff;
+}
+
+.cert-card:hover .cert-overlay {
+  opacity: 1;
+}
+
+.cert-overlay i {
+  font-size: 1.5rem;
+  color: var(--orange);
+}
+
+.cert-overlay span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Content Area */
+.cert-content {
+  padding: 1.25rem;
+}
+
+.cert-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.cert-provider {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 0.4rem;
+}
+
+/* Modal Polish */
+.modal-content {
+  background: var(--bg-panel) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.modal-header {
+  padding: 1.5rem 1.5rem 0.5rem;
+}
+
+/* Featured Education Card */
+.education-featured-card {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: linear-gradient(145deg, rgba(255, 108, 55, 0.05), rgba(12, 16, 24, 0.72));
+  border: 1px solid rgba(255, 108, 55, 0.2);
+  border-radius: var(--radius-md);
+  align-items: center;
+}
+
+.edu-icon-wrap {
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  display: grid;
+  place-items: center;
+  background: var(--orange-soft);
+  color: var(--orange);
+  border-radius: 16px;
+  font-size: 1.5rem;
+  border: 1px solid rgba(255, 108, 55, 0.1);
+}
+
+.edu-body {
+  flex-grow: 1;
+}
+
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.edu-degree {
+  margin: 0;
+  font-weight: 800;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.edu-institution {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.edu-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.edu-details {
+  margin: 0.75rem 0 0;
+  color: #d6deea;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767.98px) {
+  .education-featured-card {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .edu-header {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .edu-meta {
+    flex-direction: row;
+    align-items: center;
+  }
 }
