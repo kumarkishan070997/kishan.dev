@@ -1,262 +1,352 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kishan Maharana | Portfolio</title>
-  <meta
-    name="description"
-    content="A Postman-inspired portfolio experience where Kishan Maharana's profile loads like an API response."
-  >
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
-    rel="stylesheet"
-  >
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
-    crossorigin="anonymous"
-  >
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  >
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="app-shell">
-    <aside class="workspace-sidebar">
-      <div class="sidebar-brand">
-        <div class="brand-icon">
-          <i class="fa-solid fa-fire"></i>
-        </div>
-        <div>
-          <p class="brand-label">Portfolio API</p>
-          <h1 class="brand-title" style="font-size: 1.5rem;">Kishan Workspace</h1>
-        </div>
-      </div>
-
-      <div class="sidebar-block">
-        <p class="sidebar-heading">Collections</p>
-        <button class="collection-item is-active" type="button" data-route="portfolio">
-          <span class="method-pill method-get">GET</span>
-          <span>/portfolio/kishan</span>
-        </button>
-      </div>
-
-      <div class="sidebar-block">
-        <p class="sidebar-heading">Environment</p>
-        <div class="env-card">
-          <div class="env-row"><span>Base URL</span><strong>portfolio.dev</strong></div>
-          <div class="env-row"><span>Status</span><strong>Mock Server</strong></div>
-          <div class="env-row"><span>Version</span><strong>v1</strong></div>
-        </div>
-      </div>
-
-      <div class="sidebar-block sidebar-note">
-        <p class="sidebar-heading">How It Works</p>
-        <p>Hit the request URL and the response pane returns Kishan's portfolio as structured API data plus rendered cards.</p>
-      </div>
-    </aside>
-
-    <main class="workspace-main">
-      <header class="topbar">
-        <div>
-          <h2 class="topbar-title">Request the profile like an endpoint</h2>
-        </div>
-      </header>
-
-      <section class="request-studio">
-        <div class="request-tabs">
-          <button class="request-tab is-active" type="button">Profile Request</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kishan Maharana | Portfolio</title>
+    <meta
+      name="description"
+      content="A Postman-inspired portfolio experience where Kishan Maharana's profile loads like an API response."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="workspace-sidebar">
+        <div class="sidebar-brand">
+          <div class="brand-icon">
+            <i class="fa-solid fa-fire"></i>
+          </div>
+          <div>
+            <p class="brand-label">Portfolio API</p>
+            <h1 class="brand-title" style="font-size: 1.5rem">
+              Kishan Workspace
+            </h1>
+          </div>
         </div>
 
-        <div class="request-bar">
-          <div class="method-select">GET</div>
-          <input
-            id="requestUrl"
-            class="request-input"
-            type="text"
-            value="https://portfolio.dev/api/v1/portfolio/kishan?view=full"
-            aria-label="Portfolio request URL"
+        <div class="sidebar-block">
+          <p class="sidebar-heading">Collections</p>
+          <button
+            class="collection-item is-active"
+            type="button"
+            data-route="portfolio"
           >
-          <button id="sendRequest" class="send-btn" type="button">
-            <i class="fa-solid fa-paper-plane"></i>
-            Send
+            <span class="method-pill method-get">GET</span>
+            <span>/portfolio/kishan</span>
           </button>
         </div>
 
-        <div class="request-meta">
-          <span><i class="fa-solid fa-bolt"></i> Mocked endpoint with staged latency</span>
-          <span><i class="fa-solid fa-layer-group"></i> Returns overview, projects, skills, and contact blocks</span>
-        </div>
-      </section>
-
-      <section class="response-workbench">
-        <div class="response-header">
-          <div class="response-title-wrap">
-            <p class="response-label">Response</p>
-          </div>
-
-          <div class="response-statusbar">
-            <span class="status-chip"><i class="fa-solid fa-circle"></i> <span id="statusCode">Idle</span></span>
-            <span class="status-chip"><i class="fa-regular fa-clock"></i> <span id="latencyValue">0 ms</span></span>
-            <span class="status-chip"><i class="fa-solid fa-database"></i> <span id="payloadSize">0 KB</span></span>
+        <div class="sidebar-block">
+          <p class="sidebar-heading">Environment</p>
+          <div class="env-card">
+            <div class="env-row">
+              <span>Base URL</span><strong>portfolio.dev</strong>
+            </div>
+            <div class="env-row">
+              <span>Status</span><strong>Mock Server</strong>
+            </div>
+            <div class="env-row"><span>Version</span><strong>v1</strong></div>
           </div>
         </div>
 
-        <div class="response-panels">
-          <div class="response-json-card" style="display: none;">
-            <div class="pane-header">
-              <span class="pane-dot orange"></span>
-              <span class="pane-dot blue"></span>
-              <span class="pane-dot green"></span>
-              <strong>Raw JSON</strong>
-              <button id="copyJson" class="copy-btn" type="button" title="Copy JSON">
-                <i class="fa-solid fa-copy"></i>
+        <div class="sidebar-block sidebar-note">
+          <p class="sidebar-heading">How It Works</p>
+          <p>
+            Hit the request URL and the response pane returns Kishan's portfolio
+            as structured API data plus rendered cards.
+          </p>
+        </div>
+      </aside>
+
+      <main class="workspace-main">
+        <header class="topbar">
+          <div>
+            <h2 class="topbar-title">Request the profile like an endpoint</h2>
+          </div>
+        </header>
+
+        <section class="request-studio">
+          <div class="request-tabs">
+            <button class="request-tab is-active" type="button">
+              Profile Request
+            </button>
+          </div>
+
+          <div class="request-bar">
+            <div class="method-select">GET</div>
+            <input
+              id="requestUrl"
+              class="request-input"
+              type="text"
+              value="https://portfolio.dev/api/v1/portfolio/kishan?view=full"
+              aria-label="Portfolio request URL"
+            />
+            <button id="sendRequest" class="send-btn" type="button">
+              <i class="fa-solid fa-paper-plane"></i>
+              Send
+            </button>
+          </div>
+
+          <div class="request-meta">
+            <span
+              ><i class="fa-solid fa-bolt"></i> Mocked endpoint with staged
+              latency</span
+            >
+            <span
+              ><i class="fa-solid fa-layer-group"></i> Returns overview,
+              projects, skills, and contact blocks</span
+            >
+          </div>
+        </section>
+
+        <section class="response-workbench">
+          <div class="response-header">
+            <div class="response-title-wrap">
+              <p class="response-label">Response</p>
+            </div>
+
+            <div class="response-statusbar">
+              <span class="status-chip"
+                ><i class="fa-solid fa-circle"></i>
+                <span id="statusCode">Idle</span></span
+              >
+              <span class="status-chip"
+                ><i class="fa-regular fa-clock"></i>
+                <span id="latencyValue">0 ms</span></span
+              >
+              <span class="status-chip"
+                ><i class="fa-solid fa-database"></i>
+                <span id="payloadSize">0 KB</span></span
+              >
+              <button
+                id="toggleView"
+                class="toggle-btn status-chip"
+                type="button"
+                title="Toggle View"
+              >
+                <i class="fa-solid fa-code"></i>
               </button>
             </div>
-            <pre id="responseJson" class="response-json">{
+          </div>
+
+          <div
+            class="response-panels"
+            style="display: grid; grid-template-columns: 1fr 0fr"
+          >
+            <div class="response-json-card" style="display: none">
+              <div class="pane-header">
+                <span class="pane-dot orange"></span>
+                <span class="pane-dot blue"></span>
+                <span class="pane-dot green"></span>
+                <strong>Raw JSON</strong>
+                <button
+                  id="copyJson"
+                  class="copy-btn status-chip"
+                  type="button"
+                  title="Copy JSON"
+                >
+                  <i class="fa-solid fa-copy"></i>
+                </button>
+              </div>
+              <pre id="responseJson" class="response-json">
+{
   "message": "Ready. Hit Send to fetch the portfolio payload."
-}</pre>
-          </div>
-
-          <div class="response-preview-card">
-            <div class="pane-header">
-              <span class="pane-dot orange"></span>
-              <span class="pane-dot blue"></span>
-              <span class="pane-dot green"></span>
-              <strong>Rendered Response</strong>
+}
+            </pre
+              >
             </div>
 
-            <div id="loadingState" class="loading-state">
-              <div class="loader-ring"></div>
-              <p>Waiting for request...</p>
-            </div>
+            <div class="response-preview-card">
+              <div class="pane-header">
+                <span class="pane-dot orange"></span>
+                <span class="pane-dot blue"></span>
+                <span class="pane-dot green"></span>
+                <strong>Rendered Response</strong>
+              </div>
 
-            <div id="responsePreview" class="response-preview hidden">
-              <section class="hero-response-card">
-                <div class="hero-left">
-                  <div class="avatar-stack">
-                    <div class="avatar-token">
-                      <img id="heroAvatar" class="img-fluid" style="border-radius: 20px;" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgR_dDq8-GK32lNlL5-fgXrY9aNf0Cyc9JaYPW0tW4byvciTPqQiUTqy4byB1Gt7yrzVERYbNF8mBcbefD3WUKGAyoct5D1bP2L4D5Ylqj0FiZW2hauMAUU8o8d3zQR9b-RCUNem-yCNkSNX9mTD4B9rzVDhikNxr4YMqOeJViopUQvVYVsmGPJnnN9-15D/s879/IMG-20260121-WA00322.jpg" alt="Profile picture of Kishan Maharana">
+              <div id="loadingState" class="loading-state skeleton">
+                <p class="empty-state">Click "Send" to fetch API response 🚀</p>
+              </div>
+
+              <div id="responsePreview" class="response-preview hidden">
+                <section class="hero-response-card">
+                  <div class="hero-left">
+                    <div class="avatar-stack">
+                      <div class="avatar-card">
+                        <img
+                          id="heroAvatar"
+                          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgR_dDq8-GK32lNlL5-fgXrY9aNf0Cyc9JaYPW0tW4byvciTPqQiUTqy4byB1Gt7yrzVERYbNF8mBcbefD3WUKGAyoct5D1bP2L4D5Ylqj0FiZW2hauMAUU8o8d3zQR9b-RCUNem-yCNkSNX9mTD4B9rzVDhikNxr4YMqOeJViopUQvVYVsmGPJnnN9-15D/s879/IMG-20260121-WA00322.jpg"
+                          alt="Profile picture of Kishan Maharana"
+                        />
+                      </div>
+                      <div class="profile-meta" style="display: none">
+                        <span class="profile-badge"
+                          >Open to remote + hybrid roles</span
+                        >
+                        <div class="profile-details">
+                          <div class="detail-pill">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span id="heroLocation"></span>
+                          </div>
+                          <div class="detail-pill">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <span id="heroAvailability"></span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="endpoint-badge">200 OK</div>
-                  </div>
-                  <div>
-                    <p class="section-kicker">Profile Overview</p>
-                    <h2 id="heroName" class="hero-name"></h2>
-                    <p id="heroRole" class="hero-role"></p>
-                    <p id="heroSummary" class="hero-summary"></p>
-                  </div>
-                </div>
 
-                <div class="hero-right">
-                  <div class="metric-box">
-                    <span>Experience</span>
-                    <strong id="expYears"></strong>
+                    <div class="hero-copy">
+                      <p class="section-kicker">Profile Overview</p>
+                      <h2 id="heroName" class="hero-name"></h2>
+                      <p id="heroRole" class="hero-role"></p>
+                      <p id="heroSummary" class="hero-summary"></p>
+                    </div>
                   </div>
-                  <div class="metric-box">
-                    <span>Core Stack</span>
-                    <strong id="heroStack"></strong>
-                  </div>
-                </div>
-              </section>
 
-              <section class="response-grid">
-                <article class="studio-card">
+                  <div class="hero-right">
+                    <div class="metric-box">
+                      <span>Experience</span>
+                      <strong id="expYears"></strong>
+                    </div>
+                    <div class="metric-box">
+                      <span>Core Stack</span>
+                      <strong id="heroStack"></strong>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="response-grid">
+                  <article class="studio-card" data-aos="fade-up">
+                    <div class="card-head">
+                      <h3>Strengths</h3>
+                      <span class="card-tag">traits[]</span>
+                    </div>
+                    <div id="strengthList" class="pill-grid"></div>
+                  </article>
+
+                  <article class="studio-card" data-aos="fade-up">
+                    <div class="card-head">
+                      <h3>Profile Stats</h3>
+                      <span class="card-tag">stats</span>
+                    </div>
+                    <div id="statsGrid" class="mini-stats"></div>
+                  </article>
+                </section>
+
+                <section class="studio-card section-card" data-aos="fade-up">
                   <div class="card-head">
-                    <h3>Strengths</h3>
-                    <span class="card-tag">traits[]</span>
+                    <h3>Experience Timeline</h3>
+                    <span class="card-tag">experience[]</span>
                   </div>
-                  <div id="strengthList" class="pill-grid"></div>
-                </article>
+                  <div id="experienceGrid" class="timeline-list"></div>
+                </section>
 
-                <article class="studio-card">
+                <section class="studio-card section-card" data-aos="fade-up">
                   <div class="card-head">
-                    <h3>Profile Stats</h3>
-                    <span class="card-tag">stats</span>
+                    <h3>Projects Collection</h3>
+                    <span class="card-tag">projects[]</span>
                   </div>
-                  <div id="statsGrid" class="mini-stats"></div>
-                </article>
-              </section>
+                  <div
+                    id="projectGrid"
+                    class="card-grid"
+                    style="grid-template-columns: repeat(2, minmax(0, 1fr))"
+                  ></div>
+                </section>
 
-              <section class="studio-card section-card">
-                <div class="card-head">
-                  <h3>Experience Timeline</h3>
-                  <span class="card-tag">experience[]</span>
-                </div>
-                <div id="experienceGrid" class="timeline-list"></div>
-              </section>
-
-              <section class="studio-card section-card">
-                <div class="card-head">
-                  <h3>Education</h3>
-                  <span class="card-tag">education[]</span>
-                </div>
-                <div id="educationGrid" class="timeline-list"></div>
-              </section>
-
-              <section class="studio-card section-card">
-                <div class="card-head">
-                  <h3>Projects Collection</h3>
-                  <span class="card-tag">projects[]</span>
-                </div>
-                <div id="projectGrid" class="card-grid"></div>
-              </section>
-
-              <section class="studio-card section-card">
-                <div class="card-head">
-                  <h3>Skills Matrix</h3>
-                  <span class="card-tag">skills[]</span>
-                </div>
-                <div id="skillsGrid" class="skills-grid"></div>
-              </section>
-
-              <section class="response-grid">
-                <article class="studio-card section-card">
+                <section class="studio-card section-card" data-aos="fade-up">
                   <div class="card-head">
-                    <h3>Articles</h3>
-                    <span class="card-tag">blog[]</span>
+                    <h3>Skill Badges</h3>
+                    <span class="card-tag">badge[]</span>
                   </div>
-                  <div id="blogGrid" class="compact-list"></div>
-                </article>
-
-                <article class="studio-card section-card">
+                  <div id="skillBadgeGrid" class="skill-badge-grid"></div>
+                </section>
+                <section class="studio-card section-card" data-aos="fade-up">
                   <div class="card-head">
-                    <h3>Contact Endpoints</h3>
-                    <span class="card-tag">contact</span>
+                    <h3>Skills Matrix</h3>
+                    <span class="card-tag">skills[]</span>
                   </div>
-                  <div id="contactGrid" class="compact-list"></div>
-                </article>
-              </section>
+                  <div id="skillsGrid" class="skills-grid"></div>
+                </section>
 
-              <section class="studio-card section-card">
-                <div class="card-head">
-                  <h3>Testimonials</h3>
-                  <span class="card-tag">testimonials[]</span>
-                </div>
-                <div id="testimonialsGrid" class="compact-list"></div>
-              </section>
+                <section class="response-grid">
+                  <article class="studio-card section-card" data-aos="fade-up">
+                    <div class="card-head">
+                      <h3>Articles</h3>
+                      <span class="card-tag">blog[]</span>
+                    </div>
+                    <div id="blogGrid" class="compact-list"></div>
+                  </article>
+
+                  <article class="studio-card section-card" data-aos="fade-up">
+                    <div class="card-head">
+                      <h3>Contact Endpoints</h3>
+                      <span class="card-tag">contact</span>
+                    </div>
+                    <div id="contactGrid" class="compact-list"></div>
+                  </article>
+                </section>
+
+                <section class="studio-card section-card" data-aos="fade-up">
+                  <div class="card-head">
+                    <h3>Certifications</h3>
+                    <span class="card-tag">Certifications[]</span>
+                  </div>
+                  <div id="certificationsGrid" class="compact-list"></div>
+                </section>
+
+                <section class="studio-card section-card" data-aos="fade-up">
+                  <div class="card-head">
+                    <h3>Education</h3>
+                    <span class="card-tag">education[]</span>
+                  </div>
+                  <div id="educationGrid" class="timeline-list"></div>
+                </section>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
-  </div>
+        </section>
+      </main>
+    </div>
 
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-    crossorigin="anonymous"
-  ></script>
-  <script src="script.js"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
 </html>

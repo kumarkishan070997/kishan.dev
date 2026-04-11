@@ -2,10 +2,12 @@ const portfolioPayload = {
   profile: {
     name: "Kishan Maharana",
     role: "Software Engineer",
-    experience: "5+ years",
+    experience: "6+ years",
     summary:
       "Backend-focused engineer with strong Laravel, API, Kafka, WebSocket, and database experience. I enjoy turning workflow-heavy products into scalable, reliable systems with clean interfaces and clear developer ergonomics.",
     coreStack: "Laravel, PHP, Kafka, MySQL",
+    location: "Vadodara, India",
+    availability: "Open to remote and hybrid roles",
     strengths: [
       "API Design",
       "Scalable Architecture",
@@ -15,69 +17,130 @@ const portfolioPayload = {
     ]
   },
   stats: [
-    { label: "Projects Shipped", value: "12+" },
-    { label: "Years Experience", value: "5+" },
+    { label: "Projects Shipped", value: "8+" },
+    { label: "Years Experience", value: "6+" },
     { label: "Core Domains", value: "API / SaaS / Ops" }
   ],
   experience: [
     {
-      title: "Senior Software Engineer",
-      company: "Product Engineering",
-      period: "2023 - Present",
+      title: "Rishabh Software Pvt Ltd",
+      company: "Software Engineer",
+      period: "2025 - Present",
+      isCurrent: true,
       summary: "Leading backend architecture and delivery for platform-scale products.",
       highlights: [
-        "Built modular Laravel services for high-complexity business workflows.",
-        "Improved endpoint consistency with versioned API design and reusable service layers.",
-        "Worked cross-functionally with frontend, QA, and stakeholders to keep releases stable."
+        "Developed and enhanced scalable RESTful APIs while resolving critical server-side issues and performance bottlenecks.",
+        "Extended and optimized [highlight]Kafka-based services[/highlight] to meet evolving business and data processing requirements.",
+        "Built and maintained backend systems using Laravel and PostgreSQL for high-performance applications.",
+        "Followed clean code architecture principles to ensure scalability, maintainability, and code reusability.",
+        "Contributed to an AdTech platform focusing on data-driven performance and system efficiency.",
+        "Collaborated within a cross-functional Agile team to deliver reliable and timely product features.",
+        "Improved automated [highlight]test coverage from 20% to over 75%[/highlight], ensuring higher code quality and stability.",
+        "Designed and enhanced test cases to validate features and reduce production issues.",
+        "Optimized complex database queries and heavy system features to significantly improve performance.",
+        "Identified and resolved performance bottlenecks to enhance overall system responsiveness.",
+        "Actively participated in code reviews and contributed to maintaining high development standards.",
+        "Worked closely with team members to analyze requirements and implement efficient backend solutions."
       ]
     },
     {
-      title: "Software Engineer",
-      company: "Platform Development",
-      period: "2021 - 2023",
+      title: "Codebuddy Pvt Ltd",
+      company: "Software Developer",
+      period: "2024 - 2025",
+      isCurrent: false,
       summary: "Delivered internal tools and integration-heavy systems across multiple products.",
       highlights: [
-        "Implemented Kafka-backed processing and real-time update flows.",
-        "Created reusable admin modules for analytics, reporting, and workflow management.",
-        "Focused on maintainability, observability, and delivery speed."
+        "Developed and optimized scalable RESTful APIs, UI components, and full-stack features across multiple applications.",
+        "Implemented ElasticSearch to efficiently manage and query over 1M+ records with high performance.",
+        "Integrated AI tools like [highlight]ChatGPT and Gemini[/highlight] to automate workflows and enhance user experiences.",
+        "Built asynchronous processing systems using WebSockets, Laravel Event Listeners, and Job Queues.",
+        "Collaborated closely with international clients to deliver scalable and customized software solutions.",
+        "Developed secure and reliable payment systems using Stripe for seamless transactions.",
+        "Utilized Docker for containerization and streamlined development and deployment workflows.",
+        "Performed advanced server-level debugging and optimized application performance.",
+        "Integrated Laravel packages such as Telescope, Scout, Nova, Pulse, Socialite, and Passport to extend functionality.",
+        "Automated business workflows using tools like Zapier and Buildship.io.",
+        "Integrated third-party APIs including [highlight]Rev API, ClickUp, EmbedRock, Google Drive, YouTube API, and Zoom API[/highlight].",
+        "Optimized complex database queries to handle millions of records with reduced load times.",
+        "Developed authentication and data-sharing integrations with platforms like Google, Facebook, GitHub, and YouTube.",
+        "Implemented real-time features using WebSockets for dynamic and responsive applications.",
+        "Worked with Vue.js and Node.js to enhance frontend and backend capabilities.",
+        "Troubleshot and improved server-side processes for better reliability and scalability."
       ]
     },
     {
-      title: "Laravel Developer",
-      company: "Web Solutions",
-      period: "2019 - 2021",
+      title: "Valuecoders",
+      company: "Software Developer",
+      period: "2020 - 2023",
+      isCurrent: false,
       summary: "Built API-first systems and data-rich web applications.",
       highlights: [
-        "Developed REST APIs for client products and internal tools.",
-        "Worked with MySQL and PostgreSQL-backed systems and secure access patterns.",
-        "Delivered AJAX-driven experiences for responsive product flows."
+        "Engineered scalable RESTful APIs for a workforce management system, enhancing performance and maintainability.",
+        "Redesigned and optimized existing APIs to improve system efficiency and overall product quality.",
+        "Integrated Stripe payment gateway for secure, seamless, and reliable user transactions.",
+        "Implemented AWS S3 services to offload storage and significantly reduce server load.",
+        "Boosted application [highlight]performance by 25%[/highlight] through effective Redis caching strategies.",
+        "Developed real-time data features using Socket.io for improved user experience.",
+        "Built and maintained robust backend systems using Laravel with clean architecture principles.",
+        "Designed and developed a comprehensive admin panel for user management, payments, and access control.",
+        "Optimized database performance through indexing, query tuning, and stored procedures.",
+        "Applied service-repository pattern to ensure scalable and maintainable business logic.",
+        "Handled API versioning, structured error handling, and advanced server-side debugging.",
+        "Developed responsive frontend interfaces using Vue.js, JavaScript, HTML, CSS, Bootstrap, AJAX, and jQuery.",
+        "Implemented role-based access control (RBAC) for secure user permission management.",
+        "Led and mentored junior developers, ensuring code quality and timely delivery of features.",
+        "Collaborated across teams to deliver high-performance, user-centric product enhancements."
       ]
     }
   ],
   projects: [
     {
-      title: "Workforce Management",
-      subtitle: "Operations platform for analytics and automation",
+      title: "Workstatus",
+      subtitle: "Time Tracking & Employee Monitoring Tool",
       features: ["Real-time analytics", "Automated reporting", "Performance optimization"],
-      tags: ["Laravel", "Dashboards", "Ops"]
+      content: "Developed scalable APIs for real-time analytics and automated reporting, ensuring efficient workforce management. Focused on optimizing system performance and reliability to meet business needs.",
+      tags: ["Laravel", "Docker", "Vue JS"],
+      href: "https://www.workstatus.io/"
     },
     {
-      title: "Content Management",
-      subtitle: "Enterprise CMS with extensible APIs",
+      title: "Membership.io",
+      subtitle: "Automated Content Management Platform",
+      content:"Designed and optimized backend APIs, improved existing services, and integrated third-party tools. Worked closely with client-side developers to implement scalable features for seamless content management.",
       features: ["API optimization", "Third-party integrations", "Scalable architecture"],
-      tags: ["CMS", "REST", "PHP"]
+      tags: ["CMS", "REST", "Laravel", "Vue JS", 'Third-party APIs'],
+      href: "https://membership.io/"
     },
     {
-      title: "Resume Platform",
-      subtitle: "Career product with generation workflows",
+      title: "HiringDay",
+      subtitle: "Resume & Cover Letter Assistance Platform",
+      content:"Developed a full-stack solution in Laravel, allowing users to either upload their resume/CV or provide personal and professional details to generate expert-crafted resumes and cover letters. Designed and implemented both frontend and backend functionalities for seamless user experience.",
       features: ["Full-stack Laravel app", "Resume generation", "Template system"],
-      tags: ["Laravel", "PDF", "UX"]
+      tags: ["Laravel", "PDF", "PHP"],
+      href: "https://hiring.day/"
     },
     {
       title: "XactiMatch",
       subtitle: "Insurance claim processing system",
+      content:"Developed a Laravel-based system to compare insurance claim documents, identifying missing details, similarities, and discrepancies. Implemented data scraping, mapping, and automated report generation. Designed and built both frontend and backend solutions, along with a fully customized admin panel for seamless management.",
       features: ["Document comparison", "Data scraping", "Automated reports"],
-      tags: ["Claims", "Automation", "Reporting"]
+      tags: ["Claims", "Automation", "Reporting"],
+      href: "https://www.xactimatch.com/"
+    },
+    {
+      title: "Mpact International",
+      subtitle: "(LMS) for managing courses, learning content, and custom surveys",
+      content:"Developed frontend with Vue.js and backend with Laravel, implemented features like Assessment, Surveys, Employee management, Subscription management, and fixed existing bugs.",
+      features: ["Course management", "Custom surveys", "Subscription management"],
+      tags: ["LMS", "Vue JS", "Laravel"],
+      href: "https://mpact-int.com/"
+    },
+    {
+      title: "JCDecaux",
+      subtitle: "Adtech platform for managing digital billboard advertisements",
+      content:"Developed and optimized Restful APIs for an AdTech platform, focusing on data-driven performance and system efficiency. Collaborated within a cross-functional Agile team to deliver reliable and timely product features.",
+      features: ["Ad management", "Performance optimization", "Agile collaboration", "API development"],
+      tags: ["AdTech", "Vue JS", "Laravel", "Kafka"],
+      href: "https://www.jcdecaux.com/"
     }
   ],
   skills: [
@@ -118,29 +181,34 @@ const portfolioPayload = {
       ]
     }
   ],
+  skillBadges: [
+    { label: "APIs", icon: "fa-solid fa-network-wired" },
+    { label: "Database", icon: "fa-solid fa-database" },
+    { label: "Laravel", icon: "fa-solid fa-code" },
+    { label: "Cloud", icon: "fa-solid fa-cloud" },
+    { label: "Docker", icon: "fa-solid fa-cube" },
+    { label: "Kafka", icon: "fa-solid fa-stream" },
+    { label: "Performance", icon: "fa-solid fa-tachometer-alt" },
+    { label: "Leadership", icon: "fa-solid fa-users" }
+  ],
   blog: [
     {
-      title: "Turning business workflows into clean API contracts",
-      summary: "How structured endpoints reduce frontend friction and make scaling easier.",
-      href: "#"
+      title: "How to do object detection using Hugging Face API - Laravel",
+      summary: "Learn How to Do Object Detection Using Hugging Face API in Laravel.",
+      href: "https://www.thedevnerd.com/2025/02/blog-post.html"
     },
     {
-      title: "What makes a backend feel reliable to product teams",
-      summary: "A practical view on performance, consistency, and operational trust.",
-      href: "#"
+      title: "Discover Why Stripe Stands Out as Your Top Payment Gateway",
+      summary: "Step-by-step guide to Why Stripe is one of the best Payment Gateway.",
+      href: "https://www.thedevnerd.com/2023/04/is-stripe-the-best-payment-gateway.html"
     },
     {
-      title: "When to optimize queries and when to redesign data flow",
-      summary: "A simple mental model for deciding between tuning and re-architecture.",
-      href: "#"
+      title: "Simple Steps: Turn Database Data into JSON in Laravel - PHP",
+      summary: "Step by Step guide to Convert Database entries to JSON file in Laravel.",
+      href: "https://www.thedevnerd.com/2022/07/how-to-convert-data-to-json-file-from.html"
     }
   ],
   contact: [
-    {
-      title: "Live Portfolio",
-      value: "kumarkishan070997.github.io/kishan-dev",
-      href: "https://kumarkishan070997.github.io/kishan-dev/"
-    },
     {
       title: "GitHub",
       value: "github.com/kumarkishan070997",
@@ -149,9 +217,59 @@ const portfolioPayload = {
     {
       title: "LinkedIn",
       value: "Add your profile URL here",
-      href: "#"
+      href: "https://www.linkedin.com/in/kishanmaharana/"
     }
-  ]
+  ],
+  // Add this inside the portfolioPayload object in script.js
+// Add/Update this inside the portfolioPayload object in script.js
+certifications: [
+  {
+    title: "Kafka for beginners",
+    provider: "Udemy",
+    date: "2025",
+    image: "./docs/kafka.jpg", 
+    summary: "Comprehensive introduction to Kafka, covering core concepts, architecture, and hands-on exercises."
+  },
+  {
+    title: "Docker",
+    provider: "Udemy",
+    date: "2026",
+    image: "./docs/Docker.jpg",
+    summary: "In-depth Docker course covering containerization, orchestration, and real-world applications for developers and DevOps professionals."
+  },
+  {
+    title: "Gen AI",
+    provider: "Udemy",
+    date: "2026",
+    image: "./docs/GENAI.jpg", 
+    summary: "Comprehensive course on Generative AI, covering foundational concepts, model architectures, and practical applications across industries."
+  },
+  {
+    title: "Kubernetes",
+    provider: "Udemy",
+    date: "2026",
+    image: "./docs/kubernetes.jpg",
+    summary: "Comprehensive course on Kubernetes, covering container orchestration, deployment strategies, and real-world applications for developers and DevOps professionals."
+  },
+  {
+    title: "Node JS",
+    provider: "Udemy",
+    date: "2026",
+    image: "./docs/nodejs.jpg",
+    summary: "Comprehensive course on Node.js, covering asynchronous programming, middleware, and real-world applications for developers and DevOps professionals."
+  }
+],
+// Update this inside the portfolioPayload object in script.js
+education: [
+  {
+    degree: "Master of Computer Applications (MCA)",
+    institution: "Institute of Management and Information Technology ( IMIT )",
+    location: "Odisha, India",
+    period: "2018 - 2020",
+    score: "9.03 CGPA",
+    details: "Specialized in Software Engineering and Database Management Systems."
+  }
+],
 };
 
 const routeMap = {
@@ -178,6 +296,20 @@ function setCollectionState(activeRoute) {
   });
 }
 
+// Update the buildPayload function to handle the new route
+function buildPayload(url) {
+  if (url.includes("/projects")) return { endpoint: "projects", data: portfolioPayload.projects };
+  if (url.includes("/skills")) return { endpoint: "skills", data: portfolioPayload.skills };
+  if (url.includes("/contact")) return { endpoint: "contact", data: portfolioPayload.contact };
+  // Add this line:
+  if (url.includes("/certifications")) return { endpoint: "certifications", data: portfolioPayload.certifications };
+
+  return {
+    endpoint: "portfolio",
+    meta: { status: 200, version: "v1", generatedAt: new Date().toISOString() },
+    data: portfolioPayload
+  };
+}
 function buildPayload(url) {
   if (url.includes("/projects")) {
     return { endpoint: "projects", data: portfolioPayload.projects };
@@ -203,8 +335,9 @@ function buildPayload(url) {
 }
 
 function renderJSON(payload) {
-  ui.responseJson.textContent = JSON.stringify(payload, null, 2);
-  const sizeKb = (new Blob([ui.responseJson.textContent]).size / 1024).toFixed(1);
+  const formattedJson = JSON.stringify(payload, null, 2);
+  ui.responseJson.innerHTML = Prism.highlight(formattedJson, Prism.languages.json, 'json');
+  const sizeKb = (new Blob([formattedJson]).size / 1024).toFixed(1);
   ui.payloadSize.textContent = `${sizeKb} KB`;
 }
 
@@ -215,6 +348,8 @@ function renderHero() {
   document.getElementById("heroSummary").textContent = profile.summary;
   document.getElementById("expYears").textContent = profile.experience;
   document.getElementById("heroStack").textContent = profile.coreStack;
+  document.getElementById("heroLocation").textContent = profile.location;
+  document.getElementById("heroAvailability").textContent = profile.availability;
 }
 
 function renderStrengths() {
@@ -249,11 +384,11 @@ function renderExperience() {
               <h4 class="timeline-title">${item.title}</h4>
               <p class="timeline-company">${item.company}</p>
             </div>
-            <span class="card-tag">${item.period}</span>
+            ${item.isCurrent ? `<span class="card-tag"><span class="blink_me"></span>   ${item.period}</span>` : `<span class="card-tag">${item.period}</span>`}
           </div>
           <p class="timeline-summary">${item.summary}</p>
           <ul class="timeline-points">
-            ${item.highlights.map((point) => `<li>${point}</li>`).join("")}
+            ${item.highlights.map((point) => `<li>${highlightText(point)}</li>`).join("")}
           </ul>
         </div>
       `
@@ -272,10 +407,13 @@ function renderProjects() {
               <h4 class="project-title">${project.title}</h4>
               <p class="project-subtitle">${project.subtitle}</p>
             </div>
-            <span class="method-pill method-get">GET</span>
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+              <span class="method-pill method-get">GET</span>
+              <i class="fa-solid fa-external-link-alt" style="color: var(--orange); cursor: pointer;" onclick="window.open('${project.href}', '_blank')" title="View Project"></i>
+            </div>
           </div>
           <ul class="project-features">
-            ${project.features.map((feature) => `<li>${feature}</li>`).join("")}
+            <li>${project.content}</li>
           </ul>
           <div class="project-tags">
             ${project.tags.map((tag) => `<span class="project-tag">${tag}</span>`).join("")}
@@ -308,6 +446,23 @@ function renderSkills() {
               `
             )
             .join("")}
+        </div>
+      `
+    )
+    .join("");
+}
+
+function renderSkillBadges() {
+  const container = document.getElementById("skillBadgeGrid");
+  container.innerHTML = portfolioPayload.skillBadges
+    .map(
+      (badge) => `
+        <div class="skill-badge reveal">
+          <div class="badge-icon"><i class="${badge.icon}"></i></div>
+          <div class="badge-text">
+            <span>${badge.label}</span>
+            <small>Core capability</small>
+          </div>
         </div>
       `
     )
@@ -353,6 +508,91 @@ function revealItems() {
   });
 }
 
+function renderCertifications() {
+  const container = document.getElementById("certificationsGrid");
+  // Ensure the container uses the grid layout
+  container.className = "card-grid"; 
+  
+  container.innerHTML = portfolioPayload.certifications
+    .map((cert, index) => `
+        <article class="cert-card reveal" onclick="openCertModal(${index})">
+          <div class="cert-image-preview">
+            <img src="${cert.image}" alt="${cert.title}">
+            <div class="cert-overlay">
+              <i class="fa-solid fa-expand"></i>
+              <span>View Full Certificate</span>
+            </div>
+          </div>
+          <div class="cert-content">
+            <div class="compact-top">
+              <h4 class="cert-title">${cert.title}</h4>
+              <span class="card-tag">${cert.date}</span>
+            </div>
+            <p class="cert-provider">${cert.provider}</p>
+          </div>
+        </article>
+      `).join("");
+}
+
+function renderEducation() {
+  const container = document.getElementById("educationGrid");
+  // Only take the first (latest) item
+  const latestEdu = portfolioPayload.education[0];
+
+  container.innerHTML = `
+    <div class="education-featured-card reveal">
+      <div class="edu-icon-wrap">
+        <i class="fa-solid fa-graduation-cap"></i>
+      </div>
+      <div class="edu-body">
+        <div class="edu-header">
+          <div>
+            <h4 class="edu-degree">${latestEdu.degree}</h4>
+            <p class="edu-institution">${latestEdu.institution} • ${latestEdu.location}</p>
+          </div>
+          <div class="edu-meta">
+            <span class="card-tag">${latestEdu.period}</span>
+            <span class="method-pill method-get">${latestEdu.score}</span>
+          </div>
+        </div>
+        <p class="edu-details">${latestEdu.details}</p>
+      </div>
+    </div>
+  `;
+}
+
+// Ensure you call this in your renderPreview() function
+// renderEducation();
+
+// Global function to handle the "pop" effect
+window.openCertModal = function(index) {
+  const cert = portfolioPayload.certifications[index];
+  const modalHtml = `
+    <div class="modal fade" id="certModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark border-secondary">
+          <div class="modal-header border-0">
+            <h5 class="modal-title text-white">${cert.title}</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <img src="${cert.image}" class="img-fluid rounded" alt="${cert.title}">
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+  
+  // Remove old modal if exists
+  const oldModal = document.getElementById('certModal');
+  if (oldModal) oldModal.remove();
+  
+  document.body.insertAdjacentHTML('beforeend', modalHtml);
+  const myModal = new bootstrap.Modal(document.getElementById('certModal'));
+  myModal.show();
+};
+
+// Update your renderPreview function to include the call
 function renderPreview() {
   renderHero();
   renderStrengths();
@@ -360,10 +600,46 @@ function renderPreview() {
   renderExperience();
   renderProjects();
   renderSkills();
+  renderSkillBadges();
   renderCompactList("blogGrid", portfolioPayload.blog, "Open article");
   renderCompactList("contactGrid", portfolioPayload.contact, "Open");
+  renderCertifications(); // Add this line
+  renderEducation();
   revealItems();
   animateSkillBars();
+}
+
+
+function initPortfolioApp() {
+  // Initialize AOS on page load
+  AOS.init({
+    duration: 600,
+    easing: "ease-in-out",
+    once: false,
+    offset: 100
+  });
+
+  initCollectionButtons();
+  initSendActions();
+}
+
+document.addEventListener("DOMContentLoaded", initPortfolioApp);
+
+function animateValue(elementId, start, end, duration) {
+  const element = document.getElementById(elementId);
+  if (!element) return;
+
+  let startTimestamp = null;
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    const value = Math.floor(progress * (end - start) + start);
+    element.textContent = value + (elementId === "expYears" ? "+" : "");
+    if (progress < 1) {
+      requestAnimationFrame(step);
+    }
+  };
+  requestAnimationFrame(step);
 }
 
 function mockRequest() {
@@ -390,6 +666,19 @@ function mockRequest() {
     ui.loadingState.classList.add("hidden");
     ui.responsePreview.classList.remove("hidden");
     renderPreview();
+
+    // Initialize animations AFTER rendering
+    setTimeout(() => {
+      AOS.refresh(); // Refresh AOS for newly rendered elements
+      
+      gsap.from(".hero-response-card", {
+        y: 40,
+        opacity: 0,
+        duration: 0.6
+      });
+      
+      animateValue("expYears", 0, 6, 800);
+    }, 50);
   }, latency);
 }
 
@@ -412,9 +701,34 @@ function initSendActions() {
   });
 }
 
-function initPortfolioApp() {
-  initCollectionButtons();
-  initSendActions();
+document.getElementById('toggleView').addEventListener('click', function() {
+  const jsonCard = document.querySelector('.response-json-card');
+  const previewCard = document.querySelector('.response-preview-card');
+  if (jsonCard.style.display === 'none') {
+    jsonCard.style.display = 'block';
+    previewCard.style.display = 'none';
+  } else {
+    jsonCard.style.display = 'none';
+    previewCard.style.display = 'block';
+  }
+});
+
+document.getElementById('copyJson').addEventListener('click', function() {
+  const jsonText = ui.responseJson.textContent;
+  navigator.clipboard.writeText(jsonText).then(() => {
+    // Optional: temporary feedback
+    const icon = this.querySelector('i');
+    const originalClass = icon.className;
+    icon.className = 'fa-solid fa-check';
+    setTimeout(() => {
+      icon.className = originalClass;
+    }, 1000);
+  }).catch(err => {
+    console.error('Failed to copy: ', err);
+  });
+});
+function highlightText(text) {
+  // Highlight custom tags [highlight]text[/highlight]
+  return text.replace(/\[highlight\](.*?)\[\/highlight\]/g, '<strong style="color: var(--orange);">$1</strong>');
 }
 
-document.addEventListener("DOMContentLoaded", initPortfolioApp);
