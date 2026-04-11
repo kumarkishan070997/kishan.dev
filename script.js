@@ -30,12 +30,12 @@ const portfolioPayload = {
       summary: "Leading backend architecture and delivery for platform-scale products.",
       highlights: [
         "Developed and enhanced scalable RESTful APIs while resolving critical server-side issues and performance bottlenecks.",
-        "Extended and optimized Kafka-based services to meet evolving business and data processing requirements.",
+        "Extended and optimized [highlight]Kafka-based services[/highlight] to meet evolving business and data processing requirements.",
         "Built and maintained backend systems using Laravel and PostgreSQL for high-performance applications.",
         "Followed clean code architecture principles to ensure scalability, maintainability, and code reusability.",
         "Contributed to an AdTech platform focusing on data-driven performance and system efficiency.",
         "Collaborated within a cross-functional Agile team to deliver reliable and timely product features.",
-        "Improved automated test coverage from 20% to over 75%, ensuring higher code quality and stability.",
+        "Improved automated [highlight]test coverage from 20% to over 75%[/highlight], ensuring higher code quality and stability.",
         "Designed and enhanced test cases to validate features and reduce production issues.",
         "Optimized complex database queries and heavy system features to significantly improve performance.",
         "Identified and resolved performance bottlenecks to enhance overall system responsiveness.",
@@ -52,7 +52,7 @@ const portfolioPayload = {
       highlights: [
         "Developed and optimized scalable RESTful APIs, UI components, and full-stack features across multiple applications.",
         "Implemented ElasticSearch to efficiently manage and query over 1M+ records with high performance.",
-        "Integrated AI tools like ChatGPT and Gemini to automate workflows and enhance user experiences.",
+        "Integrated AI tools like [highlight]ChatGPT and Gemini[/highlight] to automate workflows and enhance user experiences.",
         "Built asynchronous processing systems using WebSockets, Laravel Event Listeners, and Job Queues.",
         "Collaborated closely with international clients to deliver scalable and customized software solutions.",
         "Developed secure and reliable payment systems using Stripe for seamless transactions.",
@@ -60,7 +60,7 @@ const portfolioPayload = {
         "Performed advanced server-level debugging and optimized application performance.",
         "Integrated Laravel packages such as Telescope, Scout, Nova, Pulse, Socialite, and Passport to extend functionality.",
         "Automated business workflows using tools like Zapier and Buildship.io.",
-        "Integrated third-party APIs including Rev API, ClickUp, EmbedRock, Google Drive, YouTube API, and Zoom API.",
+        "Integrated third-party APIs including [highlight]Rev API, ClickUp, EmbedRock, Google Drive, YouTube API, and Zoom API[/highlight].",
         "Optimized complex database queries to handle millions of records with reduced load times.",
         "Developed authentication and data-sharing integrations with platforms like Google, Facebook, GitHub, and YouTube.",
         "Implemented real-time features using WebSockets for dynamic and responsive applications.",
@@ -79,7 +79,7 @@ const portfolioPayload = {
         "Redesigned and optimized existing APIs to improve system efficiency and overall product quality.",
         "Integrated Stripe payment gateway for secure, seamless, and reliable user transactions.",
         "Implemented AWS S3 services to offload storage and significantly reduce server load.",
-        "Boosted application performance by 25% through effective Redis caching strategies.",
+        "Boosted application [highlight]performance by 25%[/highlight] through effective Redis caching strategies.",
         "Developed real-time data features using Socket.io for improved user experience.",
         "Built and maintained robust backend systems using Laravel with clean architecture principles.",
         "Designed and developed a comprehensive admin panel for user management, payments, and access control.",
@@ -99,28 +99,48 @@ const portfolioPayload = {
       subtitle: "Time Tracking & Employee Monitoring Tool",
       features: ["Real-time analytics", "Automated reporting", "Performance optimization"],
       content: "Developed scalable APIs for real-time analytics and automated reporting, ensuring efficient workforce management. Focused on optimizing system performance and reliability to meet business needs.",
-      tags: ["Laravel", "Docker", "Vue JS"]
+      tags: ["Laravel", "Docker", "Vue JS"],
+      href: "https://www.workstatus.io/"
     },
     {
       title: "Membership.io",
       subtitle: "Automated Content Management Platform",
       content:"Designed and optimized backend APIs, improved existing services, and integrated third-party tools. Worked closely with client-side developers to implement scalable features for seamless content management.",
       features: ["API optimization", "Third-party integrations", "Scalable architecture"],
-      tags: ["CMS", "REST", "Laravel", "Vue JS", 'Third-party APIs']
+      tags: ["CMS", "REST", "Laravel", "Vue JS", 'Third-party APIs'],
+      href: "https://membership.io/"
     },
     {
       title: "HiringDay",
       subtitle: "Resume & Cover Letter Assistance Platform",
       content:"Developed a full-stack solution in Laravel, allowing users to either upload their resume/CV or provide personal and professional details to generate expert-crafted resumes and cover letters. Designed and implemented both frontend and backend functionalities for seamless user experience.",
       features: ["Full-stack Laravel app", "Resume generation", "Template system"],
-      tags: ["Laravel", "PDF", "PHP"]
+      tags: ["Laravel", "PDF", "PHP"],
+      href: "https://hiring.day/"
     },
     {
       title: "XactiMatch",
       subtitle: "Insurance claim processing system",
       content:"Developed a Laravel-based system to compare insurance claim documents, identifying missing details, similarities, and discrepancies. Implemented data scraping, mapping, and automated report generation. Designed and built both frontend and backend solutions, along with a fully customized admin panel for seamless management.",
       features: ["Document comparison", "Data scraping", "Automated reports"],
-      tags: ["Claims", "Automation", "Reporting"]
+      tags: ["Claims", "Automation", "Reporting"],
+      href: "https://www.xactimatch.com/"
+    },
+    {
+      title: "Mpact International",
+      subtitle: "(LMS) for managing courses, learning content, and custom surveys",
+      content:"Developed frontend with Vue.js and backend with Laravel, implemented features like Assessment, Surveys, Employee management, Subscription management, and fixed existing bugs.",
+      features: ["Course management", "Custom surveys", "Subscription management"],
+      tags: ["LMS", "Vue JS", "Laravel"],
+      href: "https://mpact-int.com/"
+    },
+    {
+      title: "JCDecaux",
+      subtitle: "Adtech platform for managing digital billboard advertisements",
+      content:"Developed and optimized Restful APIs for an AdTech platform, focusing on data-driven performance and system efficiency. Collaborated within a cross-functional Agile team to deliver reliable and timely product features.",
+      features: ["Ad management", "Performance optimization", "Agile collaboration", "API development"],
+      tags: ["AdTech", "Vue JS", "Laravel", "Kafka"],
+      href: "https://www.jcdecaux.com/"
     }
   ],
   skills: [
@@ -368,7 +388,7 @@ function renderExperience() {
           </div>
           <p class="timeline-summary">${item.summary}</p>
           <ul class="timeline-points">
-            ${item.highlights.map((point) => `<li>${point}</li>`).join("")}
+            ${item.highlights.map((point) => `<li>${highlightText(point)}</li>`).join("")}
           </ul>
         </div>
       `
@@ -387,7 +407,10 @@ function renderProjects() {
               <h4 class="project-title">${project.title}</h4>
               <p class="project-subtitle">${project.subtitle}</p>
             </div>
-            <span class="method-pill method-get">GET</span>
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+              <span class="method-pill method-get">GET</span>
+              <i class="fa-solid fa-external-link-alt" style="color: var(--orange); cursor: pointer;" onclick="window.open('${project.href}', '_blank')" title="View Project"></i>
+            </div>
           </div>
           <ul class="project-features">
             <li>${project.content}</li>
@@ -704,5 +727,8 @@ document.getElementById('copyJson').addEventListener('click', function() {
     console.error('Failed to copy: ', err);
   });
 });
-
+function highlightText(text) {
+  // Highlight custom tags [highlight]text[/highlight]
+  return text.replace(/\[highlight\](.*?)\[\/highlight\]/g, '<strong style="color: var(--orange);">$1</strong>');
+}
 
