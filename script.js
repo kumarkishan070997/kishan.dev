@@ -29,12 +29,18 @@ const portfolioPayload = {
       isCurrent: true,
       summary: "Leading backend architecture and delivery for platform-scale products.",
       highlights: [
-        "Developed and enhanced RESTful APIs; resolved critical server-side issues and performance bottlenecks.",
-        "Worked on extending and modifying existing Kafka-based services as per evolving business requirements.",
-        "Involved in backend development using Laravel and PostgreSQL.",
-        "Followed clean code architecture principles to ensure scalable and maintainable codebase.",
-        "Contributed to an AdTech project with a focus on data-driven performance and efficiency.",
-        "Collaborated within a cross-functional Agile team to deliver robust and timely solutions."
+        "Developed and enhanced scalable RESTful APIs while resolving critical server-side issues and performance bottlenecks.",
+        "Extended and optimized Kafka-based services to meet evolving business and data processing requirements.",
+        "Built and maintained backend systems using Laravel and PostgreSQL for high-performance applications.",
+        "Followed clean code architecture principles to ensure scalability, maintainability, and code reusability.",
+        "Contributed to an AdTech platform focusing on data-driven performance and system efficiency.",
+        "Collaborated within a cross-functional Agile team to deliver reliable and timely product features.",
+        "Improved automated test coverage from 20% to over 75%, ensuring higher code quality and stability.",
+        "Designed and enhanced test cases to validate features and reduce production issues.",
+        "Optimized complex database queries and heavy system features to significantly improve performance.",
+        "Identified and resolved performance bottlenecks to enhance overall system responsiveness.",
+        "Actively participated in code reviews and contributed to maintaining high development standards.",
+        "Worked closely with team members to analyze requirements and implement efficient backend solutions."
       ]
     },
     {
@@ -44,17 +50,22 @@ const portfolioPayload = {
       isCurrent: false,
       summary: "Delivered internal tools and integration-heavy systems across multiple products.",
       highlights: [
-        "Developed and integrated both APIs and UI components for seamless user experiences.",
-        "Directly collaborated with clients to understand requirements and deliver tailored solutions.",
-        "Integrated authentication and data-sharing features with platforms like Google,Facebook, GitHub, YouTube, and Google Drive.",
-        "Implemented Stripe payment gateway for secure and efficient transactions.",
-        "Worked with APIs like Rev API and Embedrocks for enhanced functionality.",
-        "AI tools such as ChatGPT and Gemini, tailoring solutions to project requirements.",
-        "Implemented Laravel event listeners and job queues to enhance system performance.",
-        "Optimized database queries and integrated WebSockets for real-time data updates.",
-        "Proficient in troubleshooting and optimizing server-side processes.",
-        "Hands-on experience in working with Docker across multiple projects.",
-        "Basic experience with Vue.js and Node.js for expanding project capabilities."
+        "Developed and optimized scalable RESTful APIs, UI components, and full-stack features across multiple applications.",
+        "Implemented ElasticSearch to efficiently manage and query over 1M+ records with high performance.",
+        "Integrated AI tools like ChatGPT and Gemini to automate workflows and enhance user experiences.",
+        "Built asynchronous processing systems using WebSockets, Laravel Event Listeners, and Job Queues.",
+        "Collaborated closely with international clients to deliver scalable and customized software solutions.",
+        "Developed secure and reliable payment systems using Stripe for seamless transactions.",
+        "Utilized Docker for containerization and streamlined development and deployment workflows.",
+        "Performed advanced server-level debugging and optimized application performance.",
+        "Integrated Laravel packages such as Telescope, Scout, Nova, Pulse, Socialite, and Passport to extend functionality.",
+        "Automated business workflows using tools like Zapier and Buildship.io.",
+        "Integrated third-party APIs including Rev API, ClickUp, EmbedRock, Google Drive, YouTube API, and Zoom API.",
+        "Optimized complex database queries to handle millions of records with reduced load times.",
+        "Developed authentication and data-sharing integrations with platforms like Google, Facebook, GitHub, and YouTube.",
+        "Implemented real-time features using WebSockets for dynamic and responsive applications.",
+        "Worked with Vue.js and Node.js to enhance frontend and backend capabilities.",
+        "Troubleshot and improved server-side processes for better reliability and scalability."
       ]
     },
     {
@@ -64,17 +75,21 @@ const portfolioPayload = {
       isCurrent: false,
       summary: "Built API-first systems and data-rich web applications.",
       highlights: [
-        "Developing new API's along with redesigning existing API's.",
-        "Amazon AWS S3 integration for required services to decrease server load.",
-        "worked on query optimization and socket integration to show real-time data.",
-        "Experience with API development, versioning, error handling, and server level debugging.",
-        "Used JavaScript, HTML, CSS, Bootstrap, jQuery, AJAX and Vue JS for frontend development along with Laravel.",
-        "Handling Roles & Permissions for different users.",
-        "API development, versioning, error handling, and server level debugging.",
-        "Integrated Stripe payment gateway to manage smooth payment processing for users.",
-        "Working on service-repository patterns for smooth business logic implementation.",
-        "Working on Vue.js for Frontend Integration.",
-        "Managing a team of junior employees.",
+        "Engineered scalable RESTful APIs for a workforce management system, enhancing performance and maintainability.",
+        "Redesigned and optimized existing APIs to improve system efficiency and overall product quality.",
+        "Integrated Stripe payment gateway for secure, seamless, and reliable user transactions.",
+        "Implemented AWS S3 services to offload storage and significantly reduce server load.",
+        "Boosted application performance by 25% through effective Redis caching strategies.",
+        "Developed real-time data features using Socket.io for improved user experience.",
+        "Built and maintained robust backend systems using Laravel with clean architecture principles.",
+        "Designed and developed a comprehensive admin panel for user management, payments, and access control.",
+        "Optimized database performance through indexing, query tuning, and stored procedures.",
+        "Applied service-repository pattern to ensure scalable and maintainable business logic.",
+        "Handled API versioning, structured error handling, and advanced server-side debugging.",
+        "Developed responsive frontend interfaces using Vue.js, JavaScript, HTML, CSS, Bootstrap, AJAX, and jQuery.",
+        "Implemented role-based access control (RBAC) for secure user permission management.",
+        "Led and mentored junior developers, ensuring code quality and timely delivery of features.",
+        "Collaborated across teams to deliver high-performance, user-centric product enhancements."
       ]
     }
   ],
@@ -300,8 +315,9 @@ function buildPayload(url) {
 }
 
 function renderJSON(payload) {
-  ui.responseJson.textContent = JSON.stringify(payload, null, 2);
-  const sizeKb = (new Blob([ui.responseJson.textContent]).size / 1024).toFixed(1);
+  const formattedJson = JSON.stringify(payload, null, 2);
+  ui.responseJson.innerHTML = Prism.highlight(formattedJson, Prism.languages.json, 'json');
+  const sizeKb = (new Blob([formattedJson]).size / 1024).toFixed(1);
   ui.payloadSize.textContent = `${sizeKb} KB`;
 }
 
@@ -662,5 +678,31 @@ function initSendActions() {
   });
 }
 
+document.getElementById('toggleView').addEventListener('click', function() {
+  const jsonCard = document.querySelector('.response-json-card');
+  const previewCard = document.querySelector('.response-preview-card');
+  if (jsonCard.style.display === 'none') {
+    jsonCard.style.display = 'block';
+    previewCard.style.display = 'none';
+  } else {
+    jsonCard.style.display = 'none';
+    previewCard.style.display = 'block';
+  }
+});
+
+document.getElementById('copyJson').addEventListener('click', function() {
+  const jsonText = ui.responseJson.textContent;
+  navigator.clipboard.writeText(jsonText).then(() => {
+    // Optional: temporary feedback
+    const icon = this.querySelector('i');
+    const originalClass = icon.className;
+    icon.className = 'fa-solid fa-check';
+    setTimeout(() => {
+      icon.className = originalClass;
+    }, 1000);
+  }).catch(err => {
+    console.error('Failed to copy: ', err);
+  });
+});
 
 

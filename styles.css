@@ -1075,3 +1075,77 @@ body {
     align-items: center;
   }
 }
+
+.response-panels {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.9fr) minmax(0, 1.5fr);
+  gap: 1rem;
+  align-items: start;
+  width: 100%;
+}
+
+.response-json-card {
+  overflow: auto;
+  max-height: 720px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.response-json-card pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-x: hidden;
+}
+
+
+/* Apply only to JSON view */
+.response-json {
+  overflow: auto;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #888 transparent; /* thumb + track */
+}
+
+/* JSON Scrollbar - Theme Matched */
+.response-json {
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.12) transparent; /* Firefox */
+}
+
+/* Chrome, Edge, Safari */
+.response-json::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.response-json::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.response-json::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 108, 55, 0.6),
+    rgba(255, 108, 55, 0.3)
+  );
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+
+/* Hover effect */
+.response-json::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    var(--orange),
+    #ff8e66
+  );
+}
+
+/* Optional: subtle glow on hover */
+.response-json::-webkit-scrollbar-thumb:hover {
+  box-shadow: 0 0 8px rgba(255, 108, 55, 0.4);
+}
+
+.toggle-btn, .copy-btn {
+  border: none;
+}
