@@ -1149,3 +1149,79 @@ body {
 .toggle-btn, .copy-btn {
   border: none;
 }
+
+/* Achievement Grid */
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+/* Card */
+.achievement-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 18px;
+  background: rgba(12, 16, 24, 0.72);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+  align-items: center;
+}
+
+/* Hover */
+.achievement-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 108, 55, 0.35);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* Highlight (for Hackathon Winner) */
+.achievement-card.highlight {
+  border-color: rgba(255, 108, 55, 0.5);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 108, 55, 0.15),
+    rgba(12, 16, 24, 0.8)
+  );
+}
+
+/* Icon */
+.achievement-icon {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: var(--orange-soft);
+  color: var(--orange);
+  font-size: 1.2rem;
+}
+
+/* Content */
+.achievement-content h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.achievement-content p {
+  margin: 0.3rem 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .achievement-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .achievement-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
