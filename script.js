@@ -5,7 +5,7 @@ const portfolioPayload = {
     experience: "6+ years",
     summary:
       "Backend-focused engineer with strong Laravel, API, Kafka, WebSocket, and database experience. I enjoy turning workflow-heavy products into scalable, reliable systems with clean interfaces and clear developer ergonomics.",
-    coreStack: "Laravel, PHP, Kafka, MySQL",
+    coreStack: "Laravel, PHP, Kafka, MySQL, PostgreSQL, JS",
     location: "Vadodara, India",
     availability: "Open to remote and hybrid roles",
     strengths: [
@@ -19,7 +19,7 @@ const portfolioPayload = {
   stats: [
     { label: "Projects Shipped", value: "8+" },
     { label: "Years Experience", value: "6+" },
-    { label: "Core Domains", value: "API / SaaS / Ops" }
+    { label: "Core Domains", value: "API / SaaS" }
   ],
   experience: [
     {
@@ -259,6 +259,40 @@ certifications: [
     summary: "Comprehensive course on Node.js, covering asynchronous programming, middleware, and real-world applications for developers and DevOps professionals."
   }
 ],
+
+achievements: [
+  {
+    title: "AI Hackathon Winner",
+    subtitle: "Codebuddy • 2025",
+    icon: "fa-solid fa-trophy",
+    highlight: true
+  },
+  {
+    title: "Google Kickstart Certified",
+    subtitle: "Google Coding Competition",
+    icon: "fa-brands fa-google"
+  },
+  {
+    title: "Competitive Programmer",
+    subtitle: "CodeChef • LeetCode • GeeksforGeeks",
+    icon: "fa-solid fa-code"
+  },
+  {
+    title: "Hacktoberfest Contributor",
+    subtitle: "Open Source Contribution",
+    icon: "fa-brands fa-github"
+  },
+  {
+    title: "TCS iON Certification",
+    subtitle: "Software Engineering Industrial Practice • 2018",
+    icon: "fa-solid fa-certificate"
+  },
+  {
+    title: "Tech Blogger",
+    subtitle: "TheDevNerd",
+    icon: "fa-solid fa-pen-nib"
+  }
+],
 // Update this inside the portfolioPayload object in script.js
 education: [
   {
@@ -339,6 +373,24 @@ function renderJSON(payload) {
   ui.responseJson.innerHTML = Prism.highlight(formattedJson, Prism.languages.json, 'json');
   const sizeKb = (new Blob([formattedJson]).size / 1024).toFixed(1);
   ui.payloadSize.textContent = `${sizeKb} KB`;
+}
+
+function renderAchievements() {
+  const container = document.getElementById("achievementsGrid");
+
+  container.innerHTML = portfolioPayload.achievements
+    .map((item) => `
+      <div class="achievement-card reveal ${item.highlight ? "highlight" : ""}">
+        <div class="achievement-icon">
+          <i class="${item.icon}"></i>
+        </div>
+        <div class="achievement-content">
+          <h4>${item.title}</h4>
+          <p>${item.subtitle}</p>
+        </div>
+      </div>
+    `)
+    .join("");
 }
 
 function renderHero() {
@@ -604,6 +656,7 @@ function renderPreview() {
   renderCompactList("blogGrid", portfolioPayload.blog, "Open article");
   renderCompactList("contactGrid", portfolioPayload.contact, "Open");
   renderCertifications(); // Add this line
+  renderAchievements();
   renderEducation();
   revealItems();
   animateSkillBars();
