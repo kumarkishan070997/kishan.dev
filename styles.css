@@ -1225,3 +1225,26 @@ body {
   }
 }
 
+
+.company-link {
+  color: var(--muted);
+  transition: color 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.company-link:hover {
+  color: var(--orange);
+  text-decoration: underline;
+}
+
+.company-link i {
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.company-link:hover i {
+  opacity: 1;
+}
+

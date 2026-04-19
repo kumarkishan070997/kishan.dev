@@ -25,6 +25,7 @@ const portfolioPayload = {
     {
       title: "Rishabh Software Pvt Ltd",
       company: "Software Engineer",
+      url: "https://www.rishabhsoft.com/",
       period: "2025 - Present",
       isCurrent: true,
       summary: "Leading backend architecture and delivery for platform-scale products.",
@@ -47,6 +48,7 @@ const portfolioPayload = {
       title: "Codebuddy Pvt Ltd",
       company: "Software Developer",
       period: "2024 - 2025",
+      url: "https://codebuddy.co/",
       isCurrent: false,
       summary: "Delivered internal tools and integration-heavy systems across multiple products.",
       highlights: [
@@ -72,6 +74,7 @@ const portfolioPayload = {
       title: "Valuecoders",
       company: "Software Developer",
       period: "2020 - 2023",
+      url: "https://www.valuecoders.com/",
       isCurrent: false,
       summary: "Built API-first systems and data-rich web applications.",
       highlights: [
@@ -434,7 +437,11 @@ function renderExperience() {
           <div class="timeline-top">
             <div>
               <h4 class="timeline-title">${item.title}</h4>
-              <p class="timeline-company">${item.company}</p>
+              <p class="timeline-company">
+                <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="company-link">
+                  ${item.company} <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem; margin-left: 4px;"></i>
+                </a>
+              </p>
             </div>
             ${item.isCurrent ? `<span class="card-tag"><span class="blink_me"></span>   ${item.period}</span>` : `<span class="card-tag">${item.period}</span>`}
           </div>
@@ -674,6 +681,9 @@ function initPortfolioApp() {
 
   initCollectionButtons();
   initSendActions();
+  setTimeout(() => {
+    mockRequest();
+  }, 300);
 }
 
 document.addEventListener("DOMContentLoaded", initPortfolioApp);
