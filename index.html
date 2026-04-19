@@ -67,6 +67,10 @@
             <span class="method-pill method-get">GET</span>
             <span>/portfolio/kishan</span>
           </button>
+          <button class="collection-item" type="button" onclick="window.open('./docs/kishan-maharana.pdf', '_blank')">
+            <span class="method-pill" style="background: rgba(78, 161, 255, 0.14); color: var(--blue);">GET</span>
+            <span>/portfolio/export-pdf</span>
+          </button>
         </div>
 
         <div class="sidebar-block">
@@ -135,7 +139,10 @@
         <section class="response-workbench">
           <div class="response-header">
             <div class="response-title-wrap">
-              <p class="response-label">Response</p>
+              <div class="response-tabs">
+                <button class="resp-tab is-active" data-tab="body">Body</button>
+                <button class="resp-tab" data-tab="headers">Headers</button>
+              </div>
             </div>
 
             <div class="response-statusbar">
@@ -202,7 +209,9 @@
               </div>
 
               <div id="responsePreview" class="response-preview hidden">
-                <section class="hero-response-card">
+
+<div id="respPanelBody" class="tab-panel">  
+<section class="hero-response-card">
                   <div class="hero-left">
                     <div class="avatar-stack">
                       <div class="avatar-card">
@@ -327,13 +336,13 @@
                   </div>
                   <div id="certificationsGrid" class="compact-list"></div>
                 </section>
-<section class="studio-card section-card" data-aos="fade-up">
-  <div class="card-head">
-    <h3>Achievements</h3>
-    <span class="card-tag">achievements[]</span>
-  </div>
-  <div id="achievementsGrid" class="achievement-grid"></div>
-</section>
+                <section class="studio-card section-card" data-aos="fade-up">
+                  <div class="card-head">
+                    <h3>Achievements</h3>
+                    <span class="card-tag">achievements[]</span>
+                  </div>
+                  <div id="achievementsGrid" class="achievement-grid"></div>
+                </section>
                 <section class="studio-card section-card" data-aos="fade-up">
                   <div class="card-head">
                     <h3>Education</h3>
@@ -341,6 +350,13 @@
                   </div>
                   <div id="educationGrid" class="timeline-list"></div>
                 </section>
+</div>
+
+<div id="respPanelHeaders" class="tab-panel hidden" style="padding: 1.5rem;">
+    <div id="responseHeaders"></div>
+  </div>
+
+                
               </div>
             </div>
           </div>

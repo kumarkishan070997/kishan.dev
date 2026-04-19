@@ -1225,3 +1225,248 @@ body {
   }
 }
 
+
+.company-link {
+  color: var(--muted);
+  transition: color 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.company-link:hover {
+  color: var(--orange);
+  text-decoration: underline;
+}
+
+.company-link i {
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.company-link:hover i {
+  opacity: 1;
+}
+.response-tabs { display: flex; gap: 1rem; margin-bottom: -1px; }
+.resp-tab {
+  background: none; border: none; color: var(--muted);
+  padding: 0.5rem 0; font-weight: 600; font-size: 0.85rem;
+  border-bottom: 2px solid transparent; transition: 0.3s;
+}
+.resp-tab.is-active { color: var(--orange); border-bottom-color: var(--orange); }
+
+/* Ensure the hidden class actually removes the element from view */
+.tab-panel.hidden {
+  display: none !important;
+}
+
+.response-tabs-container {
+  background: rgba(255, 255, 255, 0.02);
+  margin-bottom: 1rem;
+}
+
+.response-tabs {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.resp-tab {
+  background: none;
+  border: none;
+  color: var(--muted);
+  padding: 0.75rem 0;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.resp-tab.is-active {
+  color: var(--orange);
+  border-bottom: 2px solid var(--orange);
+}
+.health-table tr:last-child {
+  border-bottom: none !important;
+}
+
+/* On very small screens, make the table scrollable to prevent layout break */
+@media (max-width: 768px) {
+  .health-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* --- UNIVERSAL MOBILE OPTIMIZATIONS --- */
+
+@media (max-width: 1024px) {
+  .app-shell {
+    grid-template-columns: 1fr; /* Stack sidebar on top of main content */
+  }
+
+  .workspace-sidebar {
+    position: relative;
+    height: auto;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 1.25rem;
+  }
+
+  .sidebar-block.sidebar-note {
+    display: none; /* Hide 'How it works' on mobile to save space */
+  }
+}
+
+@media (max-width: 768px) {
+  .workspace-main {
+    padding: 1rem;
+  }
+
+  /* Request Bar: Stack into vertical layers */
+  .request-bar {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .method-select {
+    min-height: 45px;
+  }
+
+  /* Hero Section: Stack avatar and text */
+  .hero-response-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-left {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .avatar-card {
+    width: 120px;
+    min-width: 120px;
+  }
+
+  .hero-right {
+    grid-template-columns: 1fr 1fr; /* Metrics side-by-side */
+    margin-top: 1rem;
+  }
+
+  /* Force all grids into single column */
+  .response-grid, 
+  .card-grid, 
+  .skills-grid, 
+  .skill-badge-grid,
+  .achievement-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Timeline & Compact Lists */
+  .timeline-top, 
+  .project-top, 
+  .compact-top,
+  .edu-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .edu-meta {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Response Status Bar: Scroll horizontally if too wide */
+  .response-statusbar {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 8px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  /* Adjust typography for small screens */
+  .hero-name {
+    font-size: 1.75rem;
+  }
+
+  .brand-title {
+    font-size: 1.25rem !important;
+  }
+
+  /* Response Tabs: Make them easier to tap */
+  .resp-tab {
+    flex: 1;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+
+/* --- THE 'API VIEW' POLISH --- */
+
+/* Container that prevents the table from pushing the screen width */
+.health-table-wrapper {
+  width: 100%;
+  overflow-x: auto; /* Enable horizontal scroll */
+  -webkit-overflow-scrolling: touch; /* Smooth scroll for iOS */
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  margin-top: 0.5rem;
+}
+
+/* Ensure the table doesn't collapse too much but allows scrolling */
+.health-table {
+  min-width: 600px; /* Minimum width to keep data readable */
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Hide scrollbar for a cleaner look while keeping functionality */
+.health-table-wrapper::-webkit-scrollbar {
+  height: 4px;
+}
+.health-table-wrapper::-webkit-scrollbar-thumb {
+  background: var(--orange);
+  border-radius: 10px;
+}
+
+
+/* Signal that proof exists */
+.achievement-card.has-proof {
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.achievement-card.has-proof:hover {
+  border-color: var(--blue);
+  background: rgba(78, 161, 255, 0.05);
+}
+
+.proof-signal {
+  color: var(--blue);
+  font-size: 0.8rem;
+  background: rgba(78, 161, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  animation: pulse-blue 2s infinite;
+}
+
+@keyframes pulse-blue {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* Modal Polish */
+#proofModal .modal-content {
+  box-shadow: 0 0 30px rgba(78, 161, 255, 0.2);
+}
+
