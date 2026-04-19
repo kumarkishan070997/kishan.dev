@@ -219,7 +219,7 @@ const portfolioPayload = {
     },
     {
       title: "LinkedIn",
-      value: "Add your profile URL here",
+      value: "linkedin.com/in/kishanmaharana/",
       href: "https://www.linkedin.com/in/kishanmaharana/"
     }
   ],
