@@ -1247,4 +1247,56 @@ body {
 .company-link:hover i {
   opacity: 1;
 }
+.response-tabs { display: flex; gap: 1rem; margin-bottom: -1px; }
+.resp-tab {
+  background: none; border: none; color: var(--muted);
+  padding: 0.5rem 0; font-weight: 600; font-size: 0.85rem;
+  border-bottom: 2px solid transparent; transition: 0.3s;
+}
+.resp-tab.is-active { color: var(--orange); border-bottom-color: var(--orange); }
+
+/* Ensure the hidden class actually removes the element from view */
+.tab-panel.hidden {
+  display: none !important;
+}
+
+.response-tabs-container {
+  background: rgba(255, 255, 255, 0.02);
+  margin-bottom: 1rem;
+}
+
+.response-tabs {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.resp-tab {
+  background: none;
+  border: none;
+  color: var(--muted);
+  padding: 0.75rem 0;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.resp-tab.is-active {
+  color: var(--orange);
+  border-bottom: 2px solid var(--orange);
+}
+.health-table tr:last-child {
+  border-bottom: none !important;
+}
+
+/* On very small screens, make the table scrollable to prevent layout break */
+@media (max-width: 768px) {
+  .health-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
 

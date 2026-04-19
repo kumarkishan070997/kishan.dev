@@ -13,13 +13,13 @@ const portfolioPayload = {
       "Scalable Architecture",
       "Performance Optimization",
       "Team Collaboration",
-      "Client Communication"
-    ]
+      "Client Communication",
+    ],
   },
   stats: [
     { label: "Projects Shipped", value: "8+" },
     { label: "Years Experience", value: "6+" },
-    { label: "Core Domains", value: "API / SaaS" }
+    { label: "Core Domains", value: "API / SaaS" },
   ],
   experience: [
     {
@@ -28,7 +28,8 @@ const portfolioPayload = {
       url: "https://www.rishabhsoft.com/",
       period: "2025 - Present",
       isCurrent: true,
-      summary: "Leading backend architecture and delivery for platform-scale products.",
+      summary:
+        "Leading backend architecture and delivery for platform-scale products.",
       highlights: [
         "Developed and enhanced scalable RESTful APIs while resolving critical server-side issues and performance bottlenecks.",
         "Extended and optimized [highlight]Kafka-based services[/highlight] to meet evolving business and data processing requirements.",
@@ -41,8 +42,8 @@ const portfolioPayload = {
         "Optimized complex database queries and heavy system features to significantly improve performance.",
         "Identified and resolved performance bottlenecks to enhance overall system responsiveness.",
         "Actively participated in code reviews and contributed to maintaining high development standards.",
-        "Worked closely with team members to analyze requirements and implement efficient backend solutions."
-      ]
+        "Worked closely with team members to analyze requirements and implement efficient backend solutions.",
+      ],
     },
     {
       title: "Codebuddy Pvt Ltd",
@@ -50,7 +51,8 @@ const portfolioPayload = {
       period: "2024 - 2025",
       url: "https://codebuddy.co/",
       isCurrent: false,
-      summary: "Delivered internal tools and integration-heavy systems across multiple products.",
+      summary:
+        "Delivered internal tools and integration-heavy systems across multiple products.",
       highlights: [
         "Developed and optimized scalable RESTful APIs, UI components, and full-stack features across multiple applications.",
         "Implemented ElasticSearch to efficiently manage and query over 1M+ records with high performance.",
@@ -67,8 +69,8 @@ const portfolioPayload = {
         "Developed authentication and data-sharing integrations with platforms like Google, Facebook, GitHub, and YouTube.",
         "Implemented real-time features using WebSockets for dynamic and responsive applications.",
         "Worked with Vue.js and Node.js to enhance frontend and backend capabilities.",
-        "Troubleshot and improved server-side processes for better reliability and scalability."
-      ]
+        "Troubleshot and improved server-side processes for better reliability and scalability.",
+      ],
     },
     {
       title: "Valuecoders",
@@ -92,59 +94,87 @@ const portfolioPayload = {
         "Developed responsive frontend interfaces using Vue.js, JavaScript, HTML, CSS, Bootstrap, AJAX, and jQuery.",
         "Implemented role-based access control (RBAC) for secure user permission management.",
         "Led and mentored junior developers, ensuring code quality and timely delivery of features.",
-        "Collaborated across teams to deliver high-performance, user-centric product enhancements."
-      ]
-    }
+        "Collaborated across teams to deliver high-performance, user-centric product enhancements.",
+      ],
+    },
   ],
   projects: [
     {
       title: "Workstatus",
       subtitle: "Time Tracking & Employee Monitoring Tool",
-      features: ["Real-time analytics", "Automated reporting", "Performance optimization"],
-      content: "Developed scalable APIs for real-time analytics and automated reporting, ensuring efficient workforce management. Focused on optimizing system performance and reliability to meet business needs.",
+      features: [
+        "Real-time analytics",
+        "Automated reporting",
+        "Performance optimization",
+      ],
+      content:
+        "Developed scalable APIs for real-time analytics and automated reporting, ensuring efficient workforce management. Focused on optimizing system performance and reliability to meet business needs.",
       tags: ["Laravel", "Docker", "Vue JS"],
-      href: "https://www.workstatus.io/"
+      href: "https://www.workstatus.io/",
     },
     {
       title: "Membership.io",
       subtitle: "Automated Content Management Platform",
-      content:"Designed and optimized backend APIs, improved existing services, and integrated third-party tools. Worked closely with client-side developers to implement scalable features for seamless content management.",
-      features: ["API optimization", "Third-party integrations", "Scalable architecture"],
-      tags: ["CMS", "REST", "Laravel", "Vue JS", 'Third-party APIs'],
-      href: "https://membership.io/"
+      content:
+        "Designed and optimized backend APIs, improved existing services, and integrated third-party tools. Worked closely with client-side developers to implement scalable features for seamless content management.",
+      features: [
+        "API optimization",
+        "Third-party integrations",
+        "Scalable architecture",
+      ],
+      tags: ["CMS", "REST", "Laravel", "Vue JS", "Third-party APIs"],
+      href: "https://membership.io/",
     },
     {
       title: "HiringDay",
       subtitle: "Resume & Cover Letter Assistance Platform",
-      content:"Developed a full-stack solution in Laravel, allowing users to either upload their resume/CV or provide personal and professional details to generate expert-crafted resumes and cover letters. Designed and implemented both frontend and backend functionalities for seamless user experience.",
-      features: ["Full-stack Laravel app", "Resume generation", "Template system"],
+      content:
+        "Developed a full-stack solution in Laravel, allowing users to either upload their resume/CV or provide personal and professional details to generate expert-crafted resumes and cover letters. Designed and implemented both frontend and backend functionalities for seamless user experience.",
+      features: [
+        "Full-stack Laravel app",
+        "Resume generation",
+        "Template system",
+      ],
       tags: ["Laravel", "PDF", "PHP"],
-      href: "https://hiring.day/"
+      href: "https://hiring.day/",
     },
     {
       title: "XactiMatch",
       subtitle: "Insurance claim processing system",
-      content:"Developed a Laravel-based system to compare insurance claim documents, identifying missing details, similarities, and discrepancies. Implemented data scraping, mapping, and automated report generation. Designed and built both frontend and backend solutions, along with a fully customized admin panel for seamless management.",
+      content:
+        "Developed a Laravel-based system to compare insurance claim documents, identifying missing details, similarities, and discrepancies. Implemented data scraping, mapping, and automated report generation. Designed and built both frontend and backend solutions, along with a fully customized admin panel for seamless management.",
       features: ["Document comparison", "Data scraping", "Automated reports"],
       tags: ["Claims", "Automation", "Reporting"],
-      href: "https://www.xactimatch.com/"
+      href: "https://www.xactimatch.com/",
     },
     {
       title: "Mpact International",
-      subtitle: "(LMS) for managing courses, learning content, and custom surveys",
-      content:"Developed frontend with Vue.js and backend with Laravel, implemented features like Assessment, Surveys, Employee management, Subscription management, and fixed existing bugs.",
-      features: ["Course management", "Custom surveys", "Subscription management"],
+      subtitle:
+        "(LMS) for managing courses, learning content, and custom surveys",
+      content:
+        "Developed frontend with Vue.js and backend with Laravel, implemented features like Assessment, Surveys, Employee management, Subscription management, and fixed existing bugs.",
+      features: [
+        "Course management",
+        "Custom surveys",
+        "Subscription management",
+      ],
       tags: ["LMS", "Vue JS", "Laravel"],
-      href: "https://mpact-int.com/"
+      href: "https://mpact-int.com/",
     },
     {
       title: "JCDecaux",
       subtitle: "Adtech platform for managing digital billboard advertisements",
-      content:"Developed and optimized Restful APIs for an AdTech platform, focusing on data-driven performance and system efficiency. Collaborated within a cross-functional Agile team to deliver reliable and timely product features.",
-      features: ["Ad management", "Performance optimization", "Agile collaboration", "API development"],
+      content:
+        "Developed and optimized Restful APIs for an AdTech platform, focusing on data-driven performance and system efficiency. Collaborated within a cross-functional Agile team to deliver reliable and timely product features.",
+      features: [
+        "Ad management",
+        "Performance optimization",
+        "Agile collaboration",
+        "API development",
+      ],
       tags: ["AdTech", "Vue JS", "Laravel", "Kafka"],
-      href: "https://www.jcdecaux.com/"
-    }
+      href: "https://www.jcdecaux.com/",
+    },
   ],
   skills: [
     {
@@ -153,8 +183,8 @@ const portfolioPayload = {
         { label: "Laravel / PHP", score: 95 },
         { label: "REST APIs", score: 92 },
         { label: "Kafka", score: 85 },
-        { label: "WebSocket", score: 82 }
-      ]
+        { label: "WebSocket", score: 82 },
+      ],
     },
     {
       name: "Database & DevOps",
@@ -162,8 +192,8 @@ const portfolioPayload = {
         { label: "MySQL", score: 90 },
         { label: "PostgreSQL", score: 86 },
         { label: "Docker", score: 76 },
-        { label: "AWS S3", score: 72 }
-      ]
+        { label: "AWS S3", score: 72 },
+      ],
     },
     {
       name: "Frontend & Product",
@@ -171,8 +201,8 @@ const portfolioPayload = {
         { label: "JavaScript", score: 84 },
         { label: "Bootstrap", score: 90 },
         { label: "Vue.js", score: 74 },
-        { label: "AJAX", score: 86 }
-      ]
+        { label: "AJAX", score: 86 },
+      ],
     },
     {
       name: "Leadership",
@@ -180,9 +210,9 @@ const portfolioPayload = {
         { label: "Team Leadership", score: 85 },
         { label: "Problem Solving", score: 95 },
         { label: "Agile Delivery", score: 80 },
-        { label: "Client Communication", score: 90 }
-      ]
-    }
+        { label: "Client Communication", score: 90 },
+      ],
+    },
   ],
   skillBadges: [
     { label: "APIs", icon: "fa-solid fa-network-wired" },
@@ -192,128 +222,138 @@ const portfolioPayload = {
     { label: "Docker", icon: "fa-solid fa-cube" },
     { label: "Kafka", icon: "fa-solid fa-stream" },
     { label: "Performance", icon: "fa-solid fa-tachometer-alt" },
-    { label: "Leadership", icon: "fa-solid fa-users" }
+    { label: "Leadership", icon: "fa-solid fa-users" },
   ],
   blog: [
     {
       title: "How to do object detection using Hugging Face API - Laravel",
-      summary: "Learn How to Do Object Detection Using Hugging Face API in Laravel.",
-      href: "https://www.thedevnerd.com/2025/02/blog-post.html"
+      summary:
+        "Learn How to Do Object Detection Using Hugging Face API in Laravel.",
+      href: "https://www.thedevnerd.com/2025/02/blog-post.html",
     },
     {
       title: "Discover Why Stripe Stands Out as Your Top Payment Gateway",
-      summary: "Step-by-step guide to Why Stripe is one of the best Payment Gateway.",
-      href: "https://www.thedevnerd.com/2023/04/is-stripe-the-best-payment-gateway.html"
+      summary:
+        "Step-by-step guide to Why Stripe is one of the best Payment Gateway.",
+      href: "https://www.thedevnerd.com/2023/04/is-stripe-the-best-payment-gateway.html",
     },
     {
       title: "Simple Steps: Turn Database Data into JSON in Laravel - PHP",
-      summary: "Step by Step guide to Convert Database entries to JSON file in Laravel.",
-      href: "https://www.thedevnerd.com/2022/07/how-to-convert-data-to-json-file-from.html"
-    }
+      summary:
+        "Step by Step guide to Convert Database entries to JSON file in Laravel.",
+      href: "https://www.thedevnerd.com/2022/07/how-to-convert-data-to-json-file-from.html",
+    },
   ],
   contact: [
     {
       title: "GitHub",
       value: "github.com/kumarkishan070997",
-      href: "https://github.com/kumarkishan070997"
+      href: "https://github.com/kumarkishan070997",
     },
     {
       title: "LinkedIn",
       value: "linkedin.com/in/kishanmaharana/",
-      href: "https://www.linkedin.com/in/kishanmaharana/"
-    }
+      href: "https://www.linkedin.com/in/kishanmaharana/",
+    },
   ],
   // Add this inside the portfolioPayload object in script.js
-// Add/Update this inside the portfolioPayload object in script.js
-certifications: [
-  {
-    title: "Kafka for beginners",
-    provider: "Udemy",
-    date: "2025",
-    image: "./docs/kafka.jpg", 
-    summary: "Comprehensive introduction to Kafka, covering core concepts, architecture, and hands-on exercises."
-  },
-  {
-    title: "Docker",
-    provider: "Udemy",
-    date: "2026",
-    image: "./docs/Docker.jpg",
-    summary: "In-depth Docker course covering containerization, orchestration, and real-world applications for developers and DevOps professionals."
-  },
-  {
-    title: "Gen AI",
-    provider: "Udemy",
-    date: "2026",
-    image: "./docs/GENAI.jpg", 
-    summary: "Comprehensive course on Generative AI, covering foundational concepts, model architectures, and practical applications across industries."
-  },
-  {
-    title: "Kubernetes",
-    provider: "Udemy",
-    date: "2026",
-    image: "./docs/kubernetes.jpg",
-    summary: "Comprehensive course on Kubernetes, covering container orchestration, deployment strategies, and real-world applications for developers and DevOps professionals."
-  },
-  {
-    title: "Node JS",
-    provider: "Udemy",
-    date: "2026",
-    image: "./docs/nodejs.jpg",
-    summary: "Comprehensive course on Node.js, covering asynchronous programming, middleware, and real-world applications for developers and DevOps professionals."
-  }
-],
+  // Add/Update this inside the portfolioPayload object in script.js
+  certifications: [
+    {
+      title: "Kafka for beginners",
+      provider: "Udemy",
+      date: "2025",
+      image: "./docs/kafka.jpg",
+      summary:
+        "Comprehensive introduction to Kafka, covering core concepts, architecture, and hands-on exercises.",
+    },
+    {
+      title: "Docker",
+      provider: "Udemy",
+      date: "2026",
+      image: "./docs/Docker.jpg",
+      summary:
+        "In-depth Docker course covering containerization, orchestration, and real-world applications for developers and DevOps professionals.",
+    },
+    {
+      title: "Gen AI",
+      provider: "Udemy",
+      date: "2026",
+      image: "./docs/GENAI.jpg",
+      summary:
+        "Comprehensive course on Generative AI, covering foundational concepts, model architectures, and practical applications across industries.",
+    },
+    {
+      title: "Kubernetes",
+      provider: "Udemy",
+      date: "2026",
+      image: "./docs/kubernetes.jpg",
+      summary:
+        "Comprehensive course on Kubernetes, covering container orchestration, deployment strategies, and real-world applications for developers and DevOps professionals.",
+    },
+    {
+      title: "Node JS",
+      provider: "Udemy",
+      date: "2026",
+      image: "./docs/nodejs.jpg",
+      summary:
+        "Comprehensive course on Node.js, covering asynchronous programming, middleware, and real-world applications for developers and DevOps professionals.",
+    },
+  ],
 
-achievements: [
-  {
-    title: "AI Hackathon Winner",
-    subtitle: "Codebuddy • 2025",
-    icon: "fa-solid fa-trophy",
-    highlight: true
-  },
-  {
-    title: "Google Kickstart Certified",
-    subtitle: "Google Coding Competition",
-    icon: "fa-brands fa-google"
-  },
-  {
-    title: "Competitive Programmer",
-    subtitle: "CodeChef • LeetCode • GeeksforGeeks",
-    icon: "fa-solid fa-code"
-  },
-  {
-    title: "Hacktoberfest Contributor",
-    subtitle: "Open Source Contribution",
-    icon: "fa-brands fa-github"
-  },
-  {
-    title: "TCS iON Certification",
-    subtitle: "Software Engineering Industrial Practice • 2018",
-    icon: "fa-solid fa-certificate"
-  },
-  {
-    title: "Tech Blogger",
-    subtitle: "TheDevNerd",
-    icon: "fa-solid fa-pen-nib"
-  }
-],
-// Update this inside the portfolioPayload object in script.js
-education: [
-  {
-    degree: "Master of Computer Applications (MCA)",
-    institution: "Institute of Management and Information Technology ( IMIT )",
-    location: "Odisha, India",
-    period: "2018 - 2020",
-    score: "9.03 CGPA",
-    details: "Specialized in Software Engineering and Database Management Systems."
-  }
-],
+  achievements: [
+    {
+      title: "AI Hackathon Winner",
+      subtitle: "Codebuddy • 2025",
+      icon: "fa-solid fa-trophy",
+      highlight: true,
+    },
+    {
+      title: "Google Kickstart Certified",
+      subtitle: "Google Coding Competition",
+      icon: "fa-brands fa-google",
+    },
+    {
+      title: "Competitive Programmer",
+      subtitle: "CodeChef • LeetCode • GeeksforGeeks",
+      icon: "fa-solid fa-code",
+    },
+    {
+      title: "Hacktoberfest Contributor",
+      subtitle: "Open Source Contribution",
+      icon: "fa-brands fa-github",
+    },
+    {
+      title: "TCS iON Certification",
+      subtitle: "Software Engineering Industrial Practice • 2018",
+      icon: "fa-solid fa-certificate",
+    },
+    {
+      title: "Tech Blogger",
+      subtitle: "TheDevNerd",
+      icon: "fa-solid fa-pen-nib",
+    },
+  ],
+  // Update this inside the portfolioPayload object in script.js
+  education: [
+    {
+      degree: "Master of Computer Applications (MCA)",
+      institution:
+        "Institute of Management and Information Technology ( IMIT )",
+      location: "Odisha, India",
+      period: "2018 - 2020",
+      score: "9.03 CGPA",
+      details:
+        "Specialized in Software Engineering and Database Management Systems.",
+    },
+  ],
 };
 
 const routeMap = {
   portfolio: "https://portfolio.dev/api/v1/portfolio/kishan?view=full",
   projects: "https://portfolio.dev/api/v1/portfolio/kishan/projects",
   skills: "https://portfolio.dev/api/v1/portfolio/kishan/skills",
-  contact: "https://portfolio.dev/api/v1/portfolio/kishan/contact"
+  contact: "https://portfolio.dev/api/v1/portfolio/kishan/contact",
 };
 
 const ui = {
@@ -324,7 +364,7 @@ const ui = {
   responsePreview: document.getElementById("responsePreview"),
   statusCode: document.getElementById("statusCode"),
   latencyValue: document.getElementById("latencyValue"),
-  payloadSize: document.getElementById("payloadSize")
+  payloadSize: document.getElementById("payloadSize"),
 };
 
 function setCollectionState(activeRoute) {
@@ -335,16 +375,23 @@ function setCollectionState(activeRoute) {
 
 // Update the buildPayload function to handle the new route
 function buildPayload(url) {
-  if (url.includes("/projects")) return { endpoint: "projects", data: portfolioPayload.projects };
-  if (url.includes("/skills")) return { endpoint: "skills", data: portfolioPayload.skills };
-  if (url.includes("/contact")) return { endpoint: "contact", data: portfolioPayload.contact };
+  if (url.includes("/projects"))
+    return { endpoint: "projects", data: portfolioPayload.projects };
+  if (url.includes("/skills"))
+    return { endpoint: "skills", data: portfolioPayload.skills };
+  if (url.includes("/contact"))
+    return { endpoint: "contact", data: portfolioPayload.contact };
   // Add this line:
-  if (url.includes("/certifications")) return { endpoint: "certifications", data: portfolioPayload.certifications };
+  if (url.includes("/certifications"))
+    return {
+      endpoint: "certifications",
+      data: portfolioPayload.certifications,
+    };
 
   return {
     endpoint: "portfolio",
     meta: { status: 200, version: "v1", generatedAt: new Date().toISOString() },
-    data: portfolioPayload
+    data: portfolioPayload,
   };
 }
 function buildPayload(url) {
@@ -365,15 +412,19 @@ function buildPayload(url) {
     meta: {
       status: 200,
       version: "v1",
-      generatedAt: new Date().toISOString()
+      generatedAt: new Date().toISOString(),
     },
-    data: portfolioPayload
+    data: portfolioPayload,
   };
 }
 
 function renderJSON(payload) {
   const formattedJson = JSON.stringify(payload, null, 2);
-  ui.responseJson.innerHTML = Prism.highlight(formattedJson, Prism.languages.json, 'json');
+  ui.responseJson.innerHTML = Prism.highlight(
+    formattedJson,
+    Prism.languages.json,
+    "json",
+  );
   const sizeKb = (new Blob([formattedJson]).size / 1024).toFixed(1);
   ui.payloadSize.textContent = `${sizeKb} KB`;
 }
@@ -382,7 +433,8 @@ function renderAchievements() {
   const container = document.getElementById("achievementsGrid");
 
   container.innerHTML = portfolioPayload.achievements
-    .map((item) => `
+    .map(
+      (item) => `
       <div class="achievement-card reveal ${item.highlight ? "highlight" : ""}">
         <div class="achievement-icon">
           <i class="${item.icon}"></i>
@@ -392,8 +444,54 @@ function renderAchievements() {
           <p>${item.subtitle}</p>
         </div>
       </div>
-    `)
+    `,
+    )
     .join("");
+}
+function initResponseTabs() {
+  const tabs = document.querySelectorAll(".resp-tab");
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const target = tab.dataset.tab;
+
+      // Update Tab UI
+      tabs.forEach((t) => t.classList.remove("is-active"));
+      tab.classList.add("is-active");
+
+      // Toggle Panels
+      if (target === "headers") {
+        document.getElementById("respPanelBody").classList.add("hidden");
+        document.getElementById("respPanelHeaders").classList.remove("hidden");
+        renderHeaders();
+      } else {
+        document.getElementById("respPanelBody").classList.remove("hidden");
+        document.getElementById("respPanelHeaders").classList.add("hidden");
+      }
+    });
+  });
+}
+function renderHeaders() {
+  const headers = {
+    "Content-Type": "application/json; charset=utf-8",
+    "X-Powered-By": "Kishan-Engine-v1.0",
+    "X-Years-Experience": "6+",
+    "X-Primary-Stack": "Laravel, Kafka, PHP",
+    "Access-Control-Allow-Origin": "*",
+  };
+
+  const headerHtml = Object.entries(headers)
+    .map(
+      ([key, val]) => `
+    <div class="header-row" style="display:flex; gap:10px; padding: 4px 0; font-family: 'JetBrains Mono'; font-size: 0.85rem;">
+      <span style="color: var(--orange); min-width: 150px;">${key}:</span>
+      <span style="color: var(--text);">${val}</span>
+    </div>
+  `,
+    )
+    .join("");
+
+  // You'll need to create a #responseHeaders container in your HTML to toggle visibility
+  document.getElementById("responseHeaders").innerHTML = headerHtml;
 }
 
 function renderHero() {
@@ -404,7 +502,8 @@ function renderHero() {
   document.getElementById("expYears").textContent = profile.experience;
   document.getElementById("heroStack").textContent = profile.coreStack;
   document.getElementById("heroLocation").textContent = profile.location;
-  document.getElementById("heroAvailability").textContent = profile.availability;
+  document.getElementById("heroAvailability").textContent =
+    profile.availability;
 }
 
 function renderStrengths() {
@@ -423,7 +522,7 @@ function renderStats() {
           <span class="mini-stat-value">${stat.value}</span>
           <span class="mini-stat-label">${stat.label}</span>
         </div>
-      `
+      `,
     )
     .join("");
 }
@@ -450,7 +549,7 @@ function renderExperience() {
             ${item.highlights.map((point) => `<li>${highlightText(point)}</li>`).join("")}
           </ul>
         </div>
-      `
+      `,
     )
     .join("");
 }
@@ -478,37 +577,60 @@ function renderProjects() {
             ${project.tags.map((tag) => `<span class="project-tag">${tag}</span>`).join("")}
           </div>
         </article>
-      `
+      `,
     )
     .join("");
 }
 
 function renderSkills() {
   const container = document.getElementById("skillsGrid");
-  container.innerHTML = portfolioPayload.skills
-    .map(
-      (group) => `
-        <div class="skill-panel reveal">
-          <h4>${group.name}</h4>
-          ${group.items
-            .map(
-              (skill) => `
-                <div class="skill-row">
-                  <div class="skill-labels">
-                    <span>${skill.label}</span>
-                    <span>${skill.score}%</span>
+  
+  // Flattening the nested skills array for a unified "monitoring" view
+  const allSkills = portfolioPayload.skills.flatMap(group => 
+    group.items.map(item => ({ ...item, category: group.name }))
+  );
+
+  container.innerHTML = `
+    <div class="studio-card reveal" style="grid-column: 1 / -1; padding: 0;">
+      <div class="pane-header" style="border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.02);">
+        <i class="fa-solid fa-server" style="color: var(--green); font-size: 0.8rem;"></i>
+        <strong style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Service Health Monitor</strong>
+      </div>
+      <div style="overflow-x: auto;">
+        <table class="health-table" style="width: 100%; border-collapse: collapse; text-align: left;">
+          <thead>
+            <tr style="color: var(--muted); font-size: 0.7rem; border-bottom: 1px solid var(--border); background: rgba(0,0,0,0.2);">
+              <th style="padding: 12px 20px;">SERVICE ENDPOINT</th>
+              <th style="padding: 12px;">CATEGORY</th>
+              <th style="padding: 12px;">STATUS</th>
+              <th style="padding: 12px 20px;">UPTIME (PROFICIENCY)</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${allSkills.map(skill => `
+              <tr style="border-bottom: 1px solid var(--border); font-size: 0.85rem; transition: background 0.2s;" onmouseover="this.style.background='rgba(255,108,55,0.03)'" onmouseout="this.style.background='transparent'">
+                <td style="padding: 12px 20px; font-family: 'JetBrains Mono'; color: var(--blue);">
+                  /api/v1/skills/${skill.label.toLowerCase().replace(/[\s./]/g, '-')}
+                </td>
+                <td style="padding: 12px; color: var(--muted); font-size: 0.8rem;">${skill.category}</td>
+                <td style="padding: 12px;">
+                  <span class="method-pill method-get" style="font-size: 0.65rem; padding: 2px 8px;">200 OK</span>
+                </td>
+                <td style="padding: 12px 20px;">
+                  <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="color: var(--green); font-weight: 700; min-width: 40px;">${skill.score}%</span>
+                    <div style="flex-grow: 1; height: 4px; background: rgba(255,255,255,0.05); border-radius: 2px; max-width: 100px;">
+                      <div style="width: ${skill.score}%; height: 100%; background: var(--green); border-radius: 2px; box-shadow: 0 0 8px var(--green);"></div>
+                    </div>
                   </div>
-                  <div class="skill-track">
-                    <div class="skill-fill" data-score="${skill.score}"></div>
-                  </div>
-                </div>
-              `
-            )
-            .join("")}
-        </div>
-      `
-    )
-    .join("");
+                </td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  `;
 }
 
 function renderSkillBadges() {
@@ -523,7 +645,7 @@ function renderSkillBadges() {
             <small>Core capability</small>
           </div>
         </div>
-      `
+      `,
     )
     .join("");
 }
@@ -546,16 +668,19 @@ function renderCompactList(targetId, items, linkText) {
             ${linkText}
           </a>
         </div>
-      `
+      `,
     )
     .join("");
 }
 
 function animateSkillBars() {
   document.querySelectorAll(".skill-fill").forEach((bar, index) => {
-    setTimeout(() => {
-      bar.style.width = `${bar.dataset.score}%`;
-    }, 100 + index * 70);
+    setTimeout(
+      () => {
+        bar.style.width = `${bar.dataset.score}%`;
+      },
+      100 + index * 70,
+    );
   });
 }
 
@@ -570,10 +695,11 @@ function revealItems() {
 function renderCertifications() {
   const container = document.getElementById("certificationsGrid");
   // Ensure the container uses the grid layout
-  container.className = "card-grid"; 
-  
+  container.className = "card-grid";
+
   container.innerHTML = portfolioPayload.certifications
-    .map((cert, index) => `
+    .map(
+      (cert, index) => `
         <article class="cert-card reveal" onclick="openCertModal(${index})">
           <div class="cert-image-preview">
             <img src="${cert.image}" alt="${cert.title}">
@@ -590,7 +716,9 @@ function renderCertifications() {
             <p class="cert-provider">${cert.provider}</p>
           </div>
         </article>
-      `).join("");
+      `,
+    )
+    .join("");
 }
 
 function renderEducation() {
@@ -624,7 +752,7 @@ function renderEducation() {
 // renderEducation();
 
 // Global function to handle the "pop" effect
-window.openCertModal = function(index) {
+window.openCertModal = function (index) {
   const cert = portfolioPayload.certifications[index];
   const modalHtml = `
     <div class="modal fade" id="certModal" tabindex="-1" aria-hidden="true">
@@ -641,13 +769,13 @@ window.openCertModal = function(index) {
       </div>
     </div>
   `;
-  
+
   // Remove old modal if exists
-  const oldModal = document.getElementById('certModal');
+  const oldModal = document.getElementById("certModal");
   if (oldModal) oldModal.remove();
-  
-  document.body.insertAdjacentHTML('beforeend', modalHtml);
-  const myModal = new bootstrap.Modal(document.getElementById('certModal'));
+
+  document.body.insertAdjacentHTML("beforeend", modalHtml);
+  const myModal = new bootstrap.Modal(document.getElementById("certModal"));
   myModal.show();
 };
 
@@ -669,18 +797,18 @@ function renderPreview() {
   animateSkillBars();
 }
 
-
 function initPortfolioApp() {
   // Initialize AOS on page load
   AOS.init({
     duration: 600,
     easing: "ease-in-out",
     once: false,
-    offset: 100
+    offset: 100,
   });
 
   initCollectionButtons();
   initSendActions();
+  initResponseTabs();
   setTimeout(() => {
     mockRequest();
   }, 300);
@@ -733,13 +861,13 @@ function mockRequest() {
     // Initialize animations AFTER rendering
     setTimeout(() => {
       AOS.refresh(); // Refresh AOS for newly rendered elements
-      
+
       gsap.from(".hero-response-card", {
         y: 40,
         opacity: 0,
-        duration: 0.6
+        duration: 0.6,
       });
-      
+
       animateValue("expYears", 0, 6, 800);
     }, 50);
   }, latency);
@@ -764,34 +892,39 @@ function initSendActions() {
   });
 }
 
-document.getElementById('toggleView').addEventListener('click', function() {
-  const jsonCard = document.querySelector('.response-json-card');
-  const previewCard = document.querySelector('.response-preview-card');
-  if (jsonCard.style.display === 'none') {
-    jsonCard.style.display = 'block';
-    previewCard.style.display = 'none';
+document.getElementById("toggleView").addEventListener("click", function () {
+  const jsonCard = document.querySelector(".response-json-card");
+  const previewCard = document.querySelector(".response-preview-card");
+  if (jsonCard.style.display === "none") {
+    jsonCard.style.display = "block";
+    previewCard.style.display = "none";
   } else {
-    jsonCard.style.display = 'none';
-    previewCard.style.display = 'block';
+    jsonCard.style.display = "none";
+    previewCard.style.display = "block";
   }
 });
 
-document.getElementById('copyJson').addEventListener('click', function() {
+document.getElementById("copyJson").addEventListener("click", function () {
   const jsonText = ui.responseJson.textContent;
-  navigator.clipboard.writeText(jsonText).then(() => {
-    // Optional: temporary feedback
-    const icon = this.querySelector('i');
-    const originalClass = icon.className;
-    icon.className = 'fa-solid fa-check';
-    setTimeout(() => {
-      icon.className = originalClass;
-    }, 1000);
-  }).catch(err => {
-    console.error('Failed to copy: ', err);
-  });
+  navigator.clipboard
+    .writeText(jsonText)
+    .then(() => {
+      // Optional: temporary feedback
+      const icon = this.querySelector("i");
+      const originalClass = icon.className;
+      icon.className = "fa-solid fa-check";
+      setTimeout(() => {
+        icon.className = originalClass;
+      }, 1000);
+    })
+    .catch((err) => {
+      console.error("Failed to copy: ", err);
+    });
 });
 function highlightText(text) {
   // Highlight custom tags [highlight]text[/highlight]
-  return text.replace(/\[highlight\](.*?)\[\/highlight\]/g, '<strong style="color: var(--orange);">$1</strong>');
+  return text.replace(
+    /\[highlight\](.*?)\[\/highlight\]/g,
+    '<strong style="color: var(--orange);">$1</strong>',
+  );
 }
-
