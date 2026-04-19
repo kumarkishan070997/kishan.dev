@@ -306,11 +306,13 @@ const portfolioPayload = {
       title: "AI Hackathon Winner",
       subtitle: "Codebuddy • 2025",
       icon: "fa-solid fa-trophy",
+      images: ["./docs/Hackathon1.jpg", "./docs/Hackathon2.jpg", "./docs/Hackathon3.jpg"],
       highlight: true,
     },
     {
       title: "Google Kickstart Certified",
       subtitle: "Google Coding Competition",
+      images: ["./docs/google-kickstart.png"],
       icon: "fa-brands fa-google",
     },
     {
@@ -321,6 +323,7 @@ const portfolioPayload = {
     {
       title: "Hacktoberfest Contributor",
       subtitle: "Open Source Contribution",
+      images: ["./docs/hacktoberfest.png"],
       icon: "fa-brands fa-github",
     },
     {
@@ -331,6 +334,8 @@ const portfolioPayload = {
     {
       title: "Tech Blogger",
       subtitle: "TheDevNerd",
+      images: ["./docs/thedevnerd-snap.png"],
+
       icon: "fa-solid fa-pen-nib",
     },
   ],
@@ -433,19 +438,23 @@ function renderAchievements() {
   const container = document.getElementById("achievementsGrid");
 
   container.innerHTML = portfolioPayload.achievements
-    .map(
-      (item) => `
-      <div class="achievement-card reveal ${item.highlight ? "highlight" : ""}">
+    .map((item, index) => {
+      const hasImages = item.images && item.images.length > 0;
+      return `
+      <div class="achievement-card reveal ${item.highlight ? "highlight" : ""} ${hasImages ? "has-proof" : ""}" 
+           ${hasImages ? `onclick="openAchievementGallery(${index})"` : ""}>
         <div class="achievement-icon">
           <i class="${item.icon}"></i>
         </div>
         <div class="achievement-content">
-          <h4>${item.title}</h4>
+          <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+            <h4>${item.title}</h4>
+            ${hasImages ? `<span class="proof-signal" title="Certification Available"><i class="fa-solid fa-file-shield"></i></span>` : ""}
+          </div>
           <p>${item.subtitle}</p>
         </div>
       </div>
-    `,
-    )
+    `})
     .join("");
 }
 function initResponseTabs() {
@@ -920,3 +929,47 @@ function highlightText(text) {
     '<strong style="color: var(--orange);">$1</strong>',
   );
 }
+
+window.openAchievementGallery = function(index) {
+  const achievement = portfolioPayload.achievements[index];
+  if (!achievement.images || achievement.images.length === 0) return;
+
+  const carouselHtml = achievement.images.length > 1 ? `
+    <div id="achievementCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        ${achievement.images.map((img, i) => `
+          <div class="carousel-item ${i === 0 ? 'active' : ''}">
+            <img src="${img}" class="d-block w-100 rounded" alt="Evidence ${i}">
+          </div>
+        `).join('')}
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#achievementCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#achievementCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  ` : `<img src="${achievement.images[0]}" class="img-fluid rounded" alt="${achievement.title}">`;
+
+  const modalHtml = `
+    <div class="modal fade" id="proofModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark border-secondary">
+          <div class="modal-header border-0">
+            <h5 class="modal-title text-white">${achievement.title} Proof</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body text-center">
+            ${carouselHtml}
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  document.getElementById('proofModal')?.remove();
+  document.body.insertAdjacentHTML('beforeend', modalHtml);
+  new bootstrap.Modal(document.getElementById('proofModal')).show();
+};
+
