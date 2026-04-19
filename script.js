@@ -584,45 +584,37 @@ function renderProjects() {
 
 function renderSkills() {
   const container = document.getElementById("skillsGrid");
-  
-  // Flattening the nested skills array for a unified "monitoring" view
   const allSkills = portfolioPayload.skills.flatMap(group => 
     group.items.map(item => ({ ...item, category: group.name }))
   );
 
   container.innerHTML = `
-    <div class="studio-card reveal" style="grid-column: 1 / -1; padding: 0;">
+    <div class="studio-card reveal" style="grid-column: 1 / -1; padding: 0; overflow: hidden;">
       <div class="pane-header" style="border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.02);">
         <i class="fa-solid fa-server" style="color: var(--green); font-size: 0.8rem;"></i>
-        <strong style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Service Health Monitor</strong>
+        <strong style="font-size: 0.8rem;">SERVICE HEALTH MONITOR</strong>
       </div>
-      <div style="overflow-x: auto;">
-        <table class="health-table" style="width: 100%; border-collapse: collapse; text-align: left;">
+      
+      <div class="health-table-wrapper">
+        <table class="health-table">
           <thead>
-            <tr style="color: var(--muted); font-size: 0.7rem; border-bottom: 1px solid var(--border); background: rgba(0,0,0,0.2);">
+            <tr style="color: var(--muted); font-size: 0.7rem; border-bottom: 1px solid var(--border);">
               <th style="padding: 12px 20px;">SERVICE ENDPOINT</th>
               <th style="padding: 12px;">CATEGORY</th>
               <th style="padding: 12px;">STATUS</th>
-              <th style="padding: 12px 20px;">UPTIME (PROFICIENCY)</th>
+              <th style="padding: 12px 20px;">UPTIME</th>
             </tr>
           </thead>
           <tbody>
             ${allSkills.map(skill => `
-              <tr style="border-bottom: 1px solid var(--border); font-size: 0.85rem; transition: background 0.2s;" onmouseover="this.style.background='rgba(255,108,55,0.03)'" onmouseout="this.style.background='transparent'">
+              <tr style="border-bottom: 1px solid var(--border); font-size: 0.85rem;">
                 <td style="padding: 12px 20px; font-family: 'JetBrains Mono'; color: var(--blue);">
                   /api/v1/skills/${skill.label.toLowerCase().replace(/[\s./]/g, '-')}
                 </td>
-                <td style="padding: 12px; color: var(--muted); font-size: 0.8rem;">${skill.category}</td>
-                <td style="padding: 12px;">
-                  <span class="method-pill method-get" style="font-size: 0.65rem; padding: 2px 8px;">200 OK</span>
-                </td>
+                <td style="padding: 12px; color: var(--muted);">${skill.category}</td>
+                <td style="padding: 12px;"><span class="method-pill method-get">200 OK</span></td>
                 <td style="padding: 12px 20px;">
-                  <div style="display: flex; align-items: center; gap: 10px;">
-                    <span style="color: var(--green); font-weight: 700; min-width: 40px;">${skill.score}%</span>
-                    <div style="flex-grow: 1; height: 4px; background: rgba(255,255,255,0.05); border-radius: 2px; max-width: 100px;">
-                      <div style="width: ${skill.score}%; height: 100%; background: var(--green); border-radius: 2px; box-shadow: 0 0 8px var(--green);"></div>
-                    </div>
-                  </div>
+                  <span style="color: var(--green); font-weight: 700;">${skill.score}%</span>
                 </td>
               </tr>
             `).join('')}
